@@ -1,7 +1,7 @@
 %!PS-Adobe-2.0
 %%Creator: dvips(k) 5.993 Copyright 2013 Radical Eye Software
 %%Title: main.dvi
-%%CreationDate: Mon May  4 13:59:24 2015
+%%CreationDate: Mon May  4 14:16:29 2015
 %%Pages: 5
 %%PageOrder: Ascend
 %%BoundingBox: 0 0 612 792
@@ -13,7 +13,7 @@
 %DVIPSCommandLine: dvips -t letter -Ppdf -G0 -j0 -D 600 -o main.ps
 %+ main.dvi
 %DVIPSParameters: dpi=600
-%DVIPSSource:  TeX output 2015.05.04:1359
+%DVIPSSource:  TeX output 2015.05.04:1416
 %%BeginProcSet: tex.pro 0 0
 %!
 /TeXDict 300 dict def TeXDict begin/N{def}def/B{bind def}N/S{exch}N/X{S
@@ -5888,9 +5888,9 @@ TeXDict begin 40258431 52099146 1000 600 600 (main.dvi)
 rf /Fe 166[48 3[48 41 37 44 1[37 48 48 1[41 48 1[22 2[37
 41 48 44 44 48 65[{ TeXBase1Encoding ReEncodeFont }17
 66.4176 /NimbusRomNo9L-Regu rf /Ff 138[42 23 32 32 42
-1[42 42 1[23 37 1[23 42 42 23 37 42 37 1[42 7[46 5[42
+1[42 42 60 23 37 1[23 42 42 23 37 42 37 1[42 7[46 5[42
 51 3[55 4[28 3[51 60 55 51 51 12[42 6[28 42[42 2[{
- TeXBase1Encoding ReEncodeFont }30 83.022 /NimbusRomNo9L-ReguItal
+ TeXBase1Encoding ReEncodeFont }31 83.022 /NimbusRomNo9L-ReguItal
 rf /Fg 134[42 1[60 42 46 28 32 37 1[46 42 46 69 23 2[23
 46 42 28 37 46 37 46 42 31[60 23[28 28 40[{
  TeXBase1Encoding ReEncodeFont }24 83.022 /NimbusRomNo9L-Medi
@@ -8312,234 +8312,247 @@ b(read/cache)e(read)i(depending)d(on)j(the)g(presence)f(of)h(data.)-9
 w(R)t(E)t(A)t(D)i Fh(operation.)31 b(Client)23 b(on)f(recei)n(ving)g
 (the)-7 671 y Fe(C)t(B)p 92 671 V 34 w(A)t(S)t(Y)t(N)t(C)p
 367 671 V 35 w(R)t(E)t(A)t(D)41 b Fh(request)c(identi\002es)i(the)f
-(request)g(o)n(wner)-9 771 y(based)24 b(on)h(the)i Fe(S)t(T)n(A)m(T)t
-(E)t(I)t(D)r Fh(.)39 b(Request)25 b(o)n(wner)f(can)h(be)g(a)h(process)
--9 871 y(or)18 b(a)i(thread)e(on)h(the)g(client)g(that)g(issued)g(the)g
-(request.)24 b(Client)c(on)-9 970 y(recei)n(ving)j(the)i(message)g
-(responds)f(with)i(the)h Fe(N)t(F)t(S)t Fh(4)p 1564 970
-V 33 w Fe(O)t(K)h Fh(back)-9 1070 y(to)22 b(the)g(serv)o(er)f(or)g(an)h
-(error)f(status)i(if)f(an)o(y)-5 b(.)29 b(No)n(w)21 b(the)h(client)g
-(has)-9 1169 y(to)g(identify)e(the)i(process)g(or)f(the)h(thread)f
-(that)h(has)g(initiated)g(the)-9 1269 y(request.)40 b(Thus)25
-b(we)h(ha)n(v)o(e)e(added)h(a)h(unique)e(id)h(in)h(the)f(request)-9
-1369 y(called)d(request)g(id.)32 b(Request)22 b(id)h(uniquely)e
-(identi\002es)h(the)h(pro-)-9 1468 y(cess)e(or)f(the)g(thread)f(on)h
-(the)g(client)g(side.)-9 1653 y Fi(4)99 b(Implementation)26
-b(of)f(Asynchr)n(onous)h(Read)-9 1799 y(4.1)99 b(XDR)-9
-1928 y Fh(Currently)15 b(we)i(ha)n(v)o(e)f(implemented)e(asynchronous)g
-(read)i(using)-9 2028 y(Pynfs)22 b(in)h(NFS)g(v)o(ersion)e(4.1.)32
-b(W)-7 b(e)24 b(generated)d(the)h(request)g(and)-9 2127
-y(response)i(structures)h(for)g(our)g(asynchronous)d(read)k(using)f
-(the)-9 2227 y(External)e(Data)h(Representation)f(\(XDR\))i([5].)36
-b(External)23 b(Data)-9 2327 y(Representation)14 b(\(XDR\))i(is)h(a)f
-(standard)f(data)h(serialization)f(for)n(-)-9 2426 y(mat.)47
-b(XDR)29 b(allo)n(ws)f(the)g(data)g(to)g(be)f(transferred)f(seamlessly)
--9 2526 y(between)f(dif)n(ferent)g(kinds)g(of)h(systems.)44
-b(Let)26 b(us)h(no)n(w)f(look)f(at)-9 2626 y(each)19
-b(of)h(these)h(structures)e(in)i(detail.)4 2772 y Fg(s)13
-b(t)g(r)g(u)g(c)g(t)64 b Fh(A)r(S)r(Y)r(N)r(C)p 637 2772
-V 34 w(R)r(E)r(A)r(D)r(4)r(a)r(r)r(g)r(s)t Fc(f)404 2872
-y Fh(u)14 b(i)h(n)f(t)h(6)g(4)p 710 2872 V 59 w(t)127
-b(r)12 b(e)g(q)g(I)g(d)25 b(;)405 2971 y(s)16 b(t)f(a)h(t)f(e)h(i)f(d)g
-(4)132 b(s)16 b(t)h(a)f(t)h(e)f(i)h(d)29 b(;)404 3071
+(request)g(o)n(wner)-9 771 y(based)16 b(on)f(the)k Fe(S)t(T)n(A)m(T)t
+(E)t(I)t(D)r Fh(.)k(Request)16 b(o)n(wner)g(can)g(be)g(a)h(process)f
+(or)-9 871 y(a)h(thread)f(on)g(the)h(client)g(that)g(issued)g(the)g
+(request.)23 b(Client)17 b(on)g(re-)-9 970 y(cei)n(ving)h(the)i
+(callback,)f(responds)g(with)h(the)i Fe(N)t(F)t(S)t Fh(4)p
+1484 970 V 34 w Fe(O)t(K)g Fh(back)d(to)-9 1070 y(the)d(serv)o(er)g(or)
+h(an)g(error)e(status)j(if)f(an)o(y)-5 b(.)23 b(No)n(w)16
+b(on)h(the)g(client)f(side,)-9 1169 y(the)i(process)g(or)h(the)f
+(thread)g(that)h(has)g(initiated)f(the)h(request)f(can)-9
+1269 y(be)30 b(identi\002ed)g(using)h Ff(stateid)p Fh(.)56
+b(But)32 b(the)e(same)h(thread)f(might)-9 1369 y(ha)n(v)o(e)23
+b(triggered)f(multiple)i(requests.)36 b(Thus)23 b(we)i(ha)n(v)o(e)e
+(added)g(a)-9 1468 y(unique)17 b(feild)i(in)g(the)f(request)h(called)f
+Ff(r)m(equestid)p Fh(.)24 b Ff(r)m(equestid)d Fh(en-)-9
+1568 y(ables)29 b(the)h(process)f(or)g(the)g(thread)g(to)h(uniquely)d
+(identify)i(the)-9 1668 y(request)h(among)f(the)i(multiple)f(requests)g
+(that)h(it)g(might)f(ha)n(v)o(e)-9 1767 y(triggered.)52
+b(W)-7 b(e)31 b(also)f(ha)n(v)o(e)g(added)f(an)g(another)g(feild)h
+(named)-9 1867 y Ff(timeout)21 b Fh(as)f(part)g(of)g(the)g
+(asynchronous)d(request)i(to)h(the)g(serv)o(er)-5 b(.)-9
+1966 y Ff(timeout)26 b Fh(enables)f(the)h(client)f(to)h(specify)f(the)h
+(maximum)d(time)-9 2066 y(that)k(the)g(serv)o(er)f(can)g(tak)o(e)h(to)g
+(send)g(a)h(callback)e(to)h(the)g(client.)-9 2166 y(If)21
+b(the)g(client)g(does)g(not)g(recie)n(v)o(e)g(a)g(callback)g(in)g(the)g
+(mentioned)-9 2265 y Ff(timeout)p Fh(,)27 b(the)g(client)g(treats)g
+(the)f(request)g(as)i(a)f(f)o(ailure)f(and)g(re-)-9 2365
+y(sends)20 b(the)g(request.)-9 2549 y Fi(4)99 b(Implementation)26
+b(of)f(Asynchr)n(onous)h(Read)-9 2695 y(4.1)99 b(XDR)-9
+2825 y Fh(W)-7 b(e)22 b(generated)d(the)i(request)f(and)g(response)g
+(structures)g(for)g(our)-9 2924 y(asynchronous)k(read)j(using)g(the)h
+(External)f(Data)g(Representa-)-9 3024 y(tion)c(\(XDR\))i([5].)35
+b(External)23 b(Data)i(Representation)d(\(XDR\))j(is)-9
+3124 y(a)17 b(standard)g(data)g(serialization)g(format.)22
+b(XDR)d(allo)n(ws)e(the)h(data)-9 3223 y(to)30 b(be)f(transferred)f
+(seamlessly)i(between)f(dif)n(ferent)g(kinds)g(of)-9
+3323 y(systems.)44 b(Let)27 b(us)g(no)n(w)f(look)f(at)i(each)g(of)f
+(these)h(structures)e(in)-9 3423 y(detail.)4 3569 y Fg(s)13
+b(t)g(r)g(u)g(c)g(t)64 b Fh(A)r(S)r(Y)r(N)r(C)p 637 3569
+V 34 w(R)r(E)r(A)r(D)r(4)r(a)r(r)r(g)r(s)t Fc(f)404 3669
+y Fh(u)14 b(i)h(n)f(t)h(6)g(4)p 710 3669 V 59 w(t)127
+b(r)12 b(e)g(q)g(I)g(d)25 b(;)405 3768 y(s)16 b(t)f(a)h(t)f(e)h(i)f(d)g
+(4)132 b(s)16 b(t)h(a)f(t)h(e)f(i)h(d)29 b(;)404 3868
 y(o)14 b(f)h(f)f(s)h(e)g(t)f(4)180 b(o)15 b(f)g(f)h(s)g(e)f(t)29
-b(;)399 3171 y(c)10 b(o)g(u)g(n)g(t)g(4)221 b(c)11 b(o)g(u)g(n)g(t)22
-b(;)404 3270 y(u)14 b(i)h(n)f(t)h(3)g(2)p 710 3270 V
-59 w(t)126 b(t)12 b(i)g(m)g(e)g(o)g(u)g(t)23 b(;)2 3370
-y Fc(g)12 b Fh(;)p Black Black -9 3517 a Ff(ASYNC)p 245
-3517 V 30 w(READ4ar)m(gs)49 b Fh(:)86 b(The)51 b(client)f(sends)h
-(these)f(ar)o(gu-)-9 3616 y(ment)g(structure)f(as)i(part)g(of)f(the)g
-(initial)h(request)f(to)h(the)-9 3716 y(serv)o(er)-5
+b(;)399 3968 y(c)10 b(o)g(u)g(n)g(t)g(4)221 b(c)11 b(o)g(u)g(n)g(t)22
+b(;)404 4067 y(u)14 b(i)h(n)f(t)h(3)g(2)p 710 4067 V
+59 w(t)126 b(t)12 b(i)g(m)g(e)g(o)g(u)g(t)23 b(;)2 4167
+y Fc(g)12 b Fh(;)p Black Black -9 4314 a Ff(ASYNC)p 245
+4314 V 30 w(READ4ar)m(gs)49 b Fh(:)86 b(The)51 b(client)f(sends)h
+(these)f(ar)o(gu-)-9 4413 y(ment)g(structure)f(as)i(part)g(of)f(the)g
+(initial)h(request)f(to)h(the)-9 4513 y(serv)o(er)-5
 b(.)133 b(Detailed)56 b(e)o(xplanation)e(of)j(the)f(ar)o(guments)e(in)
--9 3815 y Ff(ASYNC)p 245 3815 V 30 w(READ4ar)m(gs)19
-b Fh(will)h(follo)n(w)-5 b(.)-9 4015 y Ff(r)m(eqId)44
+-9 4612 y Ff(ASYNC)p 245 4612 V 30 w(READ4ar)m(gs)19
+b Fh(will)h(follo)n(w)-5 b(.)-9 4812 y Ff(r)m(eqId)44
 b Fh(:)71 b(Reqid)43 b(is)h(a)f(64)f(bit)h(inte)o(ger)m(,)k(generated)
-41 b(by)i(the)-9 4114 y(client.)36 b(This)24 b(is)h(generated)d(based)h
-(on)h(the)g(requested)e Ff(\002lehan-)-9 4214 y(dle)p
+41 b(by)i(the)-9 4911 y(client.)36 b(This)24 b(is)h(generated)d(based)h
+(on)h(the)g(requested)e Ff(\002lehan-)-9 5011 y(dle)p
 Fh(,)34 b(processId/threadId)28 b(and)j(current)p 1192
-4214 V 28 w(timestamp)h(and)f(will)-9 4314 y(uniquely)e(identify)h(e)n
+5011 V 28 w(timestamp)h(and)f(will)-9 5111 y(uniquely)e(identify)h(e)n
 (v)o(ery)g(request.)57 b(The)31 b(serv)o(er)g(passes)h(the)-9
-4413 y(same)20 b(request)g(id)g(to)g(the)h(client)f(as)h(part)f(of)g
-(the)g(callback)g(along)-9 4513 y(with)32 b(the)g(requested)f(\002le)i
-(data.)61 b(The)32 b(client)g(process/thread)-9 4612
+5210 y(same)20 b(request)g(id)g(to)g(the)h(client)f(as)h(part)f(of)g
+(the)g(callback)g(along)-9 5310 y(with)32 b(the)g(requested)f(\002le)i
+(data.)61 b(The)32 b(client)g(process/thread)-9 5409
 y(then)42 b(uses)h(this)g Ff(r)m(eqId)h Fh(to)f(uniquely)d(identify)i
-(the)g(request)-9 4712 y(among)26 b(multiple)h(requests)h(that)f(it)i
-(might)e(ha)n(v)o(e)g(triggered)f(to)-9 4812 y(the)20
-b(serv)o(er)-5 b(.)24 b(Note)c(that)h Ff(r)m(eqId)g Fh(is)h(opaque)c
-(to)i(the)h(serv)o(er)-5 b(.)-9 5011 y Ff(stateid)43
-b Fh(:)69 b(Stateid)42 b(is)h(a)f(128-bit)e(quantity)g(returned)g(by)h
-(a)-9 5111 y(serv)o(er)34 b(in)i(the)g(initial)f(open)g(request.)70
-b(It)36 b(uniquely)e(de\002nes)-9 5210 y(the)h(open)f(and)h(locking)f
-(state)i(pro)o(vided)d(by)i(the)h(serv)o(er)e(for)-9
-5310 y(a)h(speci\002c)h(open)e(or)h(lock)f(o)n(wner)g(for)h(a)h
-(speci\002c)f(\002le.)70 b(W)-7 b(e)-9 5409 y(are)30
-b(using)h Ff(stateid)i Fh(on)e(the)g(serv)o(er)f(side)h(to)g(check)g
-(the)g(client)p Black Black 2025 74 a(share/dele)o(gation)17
-b(access)k(on)f(the)g(requested)f(\002le.)2025 273 y
-Ff(of)o(fset)46 b Fh(:)73 b(Of)n(fset)44 b(\(from)f(the)h(start)h(of)e
-(the)i(\002le\))f(at)h(which)2025 372 y(the)20 b(read)g(has)g(to)h
-(start)f(in)h(the)f(\002le.)2025 572 y Ff(count)q Fh(:)69
+(the)g(request)p Black Black 2025 74 a(among)26 b(multiple)i(requests)f
+(that)h(it)g(might)g(ha)n(v)o(e)f(triggered)f(to)2025
+173 y(the)20 b(serv)o(er)-5 b(.)25 b(Note)20 b(that)g
+Ff(r)m(eqId)i Fh(is)f(opaque)e(to)h(the)g(serv)o(er)-5
+b(.)2025 372 y Ff(stateid)44 b Fh(:)69 b(Stateid)41 b(is)i(a)f(128-bit)
+e(quantity)h(returned)e(by)j(a)2025 472 y(serv)o(er)35
+b(in)g(the)h(initial)g(open)e(request.)71 b(It)36 b(uniquely)d
+(de\002nes)2025 572 y(the)i(open)g(and)g(locking)f(state)i(pro)o(vided)
+d(by)i(the)g(serv)o(er)g(for)2025 671 y(a)h(speci\002c)f(open)f(or)h
+(lock)g(o)n(wner)f(for)g(a)i(speci\002c)f(\002le.)71
+b(W)-7 b(e)2025 771 y(are)31 b(using)f Ff(stateid)k Fh(on)c(the)h(serv)
+o(er)f(side)i(to)f(check)f(the)h(client)2025 871 y(share/dele)o(gation)
+17 b(access)k(on)f(the)g(requested)f(\002le.)2025 1070
+y Ff(of)o(fset)46 b Fh(:)73 b(Of)n(fset)44 b(\(from)f(the)h(start)h(of)
+e(the)i(\002le\))f(at)h(which)2025 1169 y(the)20 b(read)g(has)g(to)h
+(start)f(in)h(the)f(\002le.)2025 1369 y Ff(count)q Fh(:)69
 b(Number)41 b(of)h(bytes)g(to)h(read)f(from)f(the)h(requested)2025
-671 y(\002le.)2025 871 y(On)25 b(recei)n(ving)f(the)h(request)f(from)g
-(the)h(client,)h(the)f(serv)o(er)f(per)n(-)2025 970 y(forms)i(the)g
-(initial)h(checks.)42 b(Then)26 b(the)g(serv)o(er)g(responds)f(with)
-2027 1070 y(A)t(S)t(Y)t(N)t(C)p 2331 1070 V 35 w(R)t(E)t(A)t(D)t(4)t
+1468 y(\002le.)2025 1668 y Ff(timeout)q Fh(:)23 b(Number)15
+b(of)g(bytes)h(to)g(read)f(from)g(the)h(requested)e(\002le.)2025
+1867 y(On)25 b(recei)n(ving)f(the)h(request)f(from)g(the)h(client,)h
+(the)f(serv)o(er)f(per)n(-)2025 1966 y(forms)i(the)g(initial)h(checks.)
+42 b(Then)26 b(the)g(serv)o(er)g(responds)f(with)2027
+2066 y(A)t(S)t(Y)t(N)t(C)p 2331 2066 V 35 w(R)t(E)t(A)t(D)t(4)t
 Fe(R)t(E)t(S)20 b Fh(to)d(the)g(client.)24 b(No)n(w)17
-b(we)g(will)h(e)o(xplain)2025 1169 y(the)23 b(status)g(passed)f(as)h
-(part)g(of)h(A)t(S)t(Y)t(N)t(C)p 3249 1169 V 35 w(R)t(E)t(A)t(D)t(4)t
-Fe(R)t(E)t(S)h Fh(to)e(the)2025 1269 y(client.)2038 1411
+b(we)g(will)h(e)o(xplain)2025 2166 y(the)23 b(status)g(passed)f(as)h
+(part)g(of)h(A)t(S)t(Y)t(N)t(C)p 3249 2166 V 35 w(R)t(E)t(A)t(D)t(4)t
+Fe(R)t(E)t(S)h Fh(to)e(the)2025 2265 y(client.)2038 2426
 y Fg(s)13 b(t)g(r)g(u)g(c)g(t)64 b Fh(A)q(S)q(Y)q(N)q(C)p
-2666 1411 V 35 w(R)q(E)q(A)q(D)q(4)q(r)q(e)q(s)8 b Fc(f)2439
-1511 y Fh(n)15 b(f)g(s)h(s)g(t)g(a)f(t)h(4)529 b(s)16
-b(t)g(a)f(t)h(u)f(s)29 b(;)2037 1610 y Fc(g)12 b Fh(;)p
-Black Black 2025 1753 a Ff(status)45 b Fh(:)74 b(Indicates)44
-b(the)g(status)h(corresponding)c(to)k(initial)2025 1852
+2666 2426 V 35 w(R)q(E)q(A)q(D)q(4)q(r)q(e)q(s)8 b Fc(f)2439
+2526 y Fh(n)15 b(f)g(s)h(s)g(t)g(a)f(t)h(4)529 b(s)16
+b(t)g(a)f(t)h(u)f(s)29 b(;)2037 2625 y Fc(g)12 b Fh(;)p
+Black Black 2025 2791 a Ff(status)45 b Fh(:)74 b(Indicates)44
+b(the)g(status)h(corresponding)c(to)k(initial)2025 2891
 y(permission)31 b(checks)g(on)h(the)g(requested)f(\002le.)61
-b(On)32 b(recei)n(ving)2025 1952 y(the)22 b(asynchronous)d(read)j
+b(On)32 b(recei)n(ving)2025 2991 y(the)22 b(asynchronous)d(read)j
 (request)g(on)f(the)i(serv)o(er)e(side,)i(we)f(are)2025
-2051 y(checking)31 b(the)h(client')-5 b(s)33 b(share/dele)o(gation)d
-(on)i(the)g(requested)2025 2151 y(\002le.)42 b(On)25
+3090 y(checking)31 b(the)h(client')-5 b(s)33 b(share/dele)o(gation)d
+(on)i(the)g(requested)2025 3190 y(\002le.)42 b(On)25
 b(success)h(we)g(will)g(return)h Fe(N)t(F)t(S)t Fh(4)p
-3284 2151 V 33 w Fe(O)t(K)r Fh(.)42 b(If)25 b(the)h(checks)2025
-2251 y(f)o(ail,)20 b(we)h(are)f(returning)e(appropriate)g(error)h
-(status.)2025 2450 y(Let)58 b(us)g(no)n(w)f(understand)f(the)h
-(structure)g(used)h(by)f(the)2025 2550 y(serv)o(er)24
+3284 3190 V 33 w Fe(O)t(K)r Fh(.)42 b(If)25 b(the)h(checks)2025
+3289 y(f)o(ail,)20 b(we)h(are)f(returning)e(appropriate)g(error)h
+(status.)2025 3489 y(Let)58 b(us)g(no)n(w)f(understand)f(the)h
+(structure)g(used)h(by)f(the)2025 3588 y(serv)o(er)24
 b(when)f(making)g(a)i(callback)f(to)h(the)f(client.)38
-b(The)24 b(serv)o(er)2025 2649 y(passes)j Ff(CB)p 2375
-2649 V 30 w(ASYNC)p 2654 2649 V 30 w(READ4ar)m(gs)d Fh(as)j(part)f(of)g
-(the)g(request)f(to)2025 2749 y(the)d(client.)31 b(W)-7
+b(The)24 b(serv)o(er)2025 3688 y(passes)j Ff(CB)p 2375
+3688 V 30 w(ASYNC)p 2654 3688 V 30 w(READ4ar)m(gs)d Fh(as)j(part)f(of)g
+(the)g(request)f(to)2025 3788 y(the)d(client.)31 b(W)-7
 b(e)24 b(will)f(no)n(w)e(look)h(at)h(each)e(of)h(the)h(ar)o(guments)d
-(in)2025 2848 y(detail.)2033 2991 y Fg(u)8 b(n)g(i)g(o)g(n)58
-b Fh(C)r(B)p 2445 2991 V 35 w(A)r(S)r(Y)r(N)r(C)p 2769
-2991 V 34 w(R)r(E)r(A)r(D)r(4)r(a)r(r)r(g)r(s)2434 3090
+(in)2025 3887 y(detail.)2033 4048 y Fg(u)8 b(n)g(i)g(o)g(n)58
+b Fh(C)r(B)p 2445 4048 V 35 w(A)r(S)r(Y)r(N)r(C)p 2769
+4048 V 34 w(R)r(E)r(A)r(D)r(4)r(a)r(r)r(g)r(s)2434 4147
 y Fg(s)10 b(w)g(i)g(t)g(c)g(h)23 b Fh(\()k(n)15 b(f)g(s)h(s)g(t)g(a)f
 (t)h(4)80 b(s)16 b(t)g(a)f(t)h(u)f(s)27 b(\))10 b Fc(f)2434
-3190 y Fg(c)g(a)g(s)g(e)61 b Fh(N)q(F)q(S)q(4)p 2876
-3190 V 30 w(O)q(K)14 b(:)2476 3289 y(C)s(B)p 2597 3289
-V 36 w(A)s(S)s(Y)s(N)s(C)p 2926 3289 V 34 w(R)s(E)s(A)s(D)s(4)s(a)s(r)s
+4247 y Fg(c)g(a)g(s)g(e)61 b Fh(N)q(F)q(S)q(4)p 2876
+4247 V 30 w(O)q(K)14 b(:)2476 4347 y(C)s(B)p 2597 4347
+V 36 w(A)s(S)s(Y)s(N)s(C)p 2926 4347 V 34 w(R)s(E)s(A)s(D)s(4)s(a)s(r)s
 (g)s(s)s(o)s(k)56 b(a)10 b(r)g(g)g(o)g(k)g(4)20 b(;)2436
-3389 y Fg(d)12 b(e)g(f)g(a)g(u)g(l)g(t)28 b Fh(:)2831
-3489 y Fg(v)9 b(o)g(i)g(d)24 b Fh(;)2037 3588 y Fc(g)12
-b Fh(;)p Black Black 2025 3730 a(The)30 b(\002rst)i(ar)o(gument)c(in)j
-(the)g(callback)e(request)h(to)h(the)g(client)2025 3830
+4446 y Fg(d)12 b(e)g(f)g(a)g(u)g(l)g(t)28 b Fh(:)2831
+4546 y Fg(v)9 b(o)g(i)g(d)24 b Fh(;)2037 4646 y Fc(g)12
+b Fh(;)p Black Black 2025 4812 a(The)30 b(\002rst)i(ar)o(gument)c(in)j
+(the)g(callback)e(request)h(to)h(the)g(client)2025 4911
 y(is)25 b(the)e(status.)36 b(If)24 b(the)g(data)f(is)i(fetched)d
-(successfully)h(from)g(the)2025 3930 y(local)29 b(\002le)h(system,)h
+(successfully)h(from)g(the)2025 5011 y(local)29 b(\002le)h(system,)h
 (the)e(status)h(will)f(be)i Fe(N)t(F)t(S)t Fh(4)p 3436
-3930 V 34 w Fe(O)t(K)h Fh(.)52 b(In)29 b(case)2025 4029
+5011 V 34 w Fe(O)t(K)h Fh(.)52 b(In)29 b(case)2025 5111
 y(of)21 b(an)h(error)m(,)e(an)i(appropriate)d(error)h(status)j(will)f
-(be)f(sent)h(to)g(the)2025 4129 y(client.)55 b(If)30
+(be)f(sent)h(to)g(the)2025 5210 y(client.)55 b(If)30
 b(the)h(data)f(is)h(fetched)e(successfully)-5 b(,)32
-b(a)f(second)e(ar)n(-)2025 4229 y(gument)h(of)g(type)h
-Ff(CB)p 2692 4229 V 30 w(ASYNC)p 2971 4229 V 30 w(READ4ar)m(gsok)f
-Fh(will)i(also)f(be)2025 4328 y(passed)23 b(in)f(the)h(callback)f(to)h
-(the)f(client.)33 b(Otherwise,)23 b(only)f(sta-)2025
-4428 y(tus)h(will)g(be)f(passed.)31 b(A)23 b(detailed)e(e)o(xplanation)
-f(of)i(each)g(of)g(the)2025 4527 y(\002elds)f(in)f Ff(CB)p
-2422 4527 V 30 w(ASYNC)p 2701 4527 V 30 w(READ4ar)m(gsok)g
-Fh(will)h(follo)n(w)-5 b(.)2038 4670 y Fg(s)13 b(t)g(r)g(u)g(c)g(t)65
-b Fh(C)s(B)p 2497 4670 V 36 w(A)s(S)s(Y)s(N)s(C)p 2826
-4670 V 34 w(R)s(E)s(A)s(D)s(4)s(a)s(r)s(g)s(s)s(o)s(k)q
-Fc(f)2438 4769 y Fh(u)15 b(i)g(n)f(t)h(6)f(4)p 2744 4769
-V 59 w(t)476 b(r)12 b(e)g(q)g(I)g(d)25 b(;)2434 4869
-y(b)10 b(o)g(o)g(l)668 b(e)11 b(o)g(f)23 b(;)2432 4968
-y(o)8 b(p)g(a)g(q)g(u)g(e)118 b(d)10 b(a)g(t)g(a)20 b
-Fb(<)o(>)o Fh(;)2037 5068 y Fc(g)12 b Fh(;)p Black Black
-2025 5210 a Ff(r)m(eqId)r Fh(:)39 b(The)27 b Ff(r)m(eqId)i
-Fh(recei)n(v)o(ed)d(by)h(the)g(serv)o(er)f(from)h(the)g(client)2025
-5310 y(during)17 b(the)h(initial)h(asynchronous)c(read)j(request.)24
-b(This)18 b(is)h(used)2025 5409 y(by)h(the)g(client)g(to)h(identify)e
-(the)h(o)n(wner)f(of)h(the)g(request.)p Black 1929 5646
-a(4)p Black eop end
+b(a)f(second)e(ar)n(-)2025 5310 y(gument)h(of)g(type)h
+Ff(CB)p 2692 5310 V 30 w(ASYNC)p 2971 5310 V 30 w(READ4ar)m(gsok)f
+Fh(will)i(also)f(be)2025 5409 y(passed)23 b(in)f(the)h(callback)f(to)h
+(the)f(client.)33 b(Otherwise,)23 b(only)f(sta-)p Black
+1929 5646 a(4)p Black eop end
 %%Page: 5 5
-TeXDict begin 5 4 bop Black Black -9 173 a Ff(eof)56
+TeXDict begin 5 4 bop Black Black -9 74 a Fh(tus)22 b(will)h(be)f
+(passed.)31 b(A)23 b(detailed)f(e)o(xplanation)e(of)i(each)g(of)g(the)
+-9 173 y(\002elds)e(in)h Ff(CB)p 388 173 25 4 v 30 w(ASYNC)p
+667 173 V 30 w(READ4ar)m(gsok)e Fh(will)i(follo)n(w)-5
+b(.)4 309 y Fg(s)13 b(t)g(r)g(u)g(c)g(t)65 b Fh(C)s(B)p
+463 309 V 35 w(A)s(S)s(Y)s(N)s(C)p 791 309 V 35 w(R)s(E)s(A)s(D)s(4)s
+(a)s(r)s(g)s(s)s(o)s(k)q Fc(f)404 409 y Fh(u)14 b(i)h(n)f(t)h(6)g(4)p
+710 409 V 59 w(t)475 b(r)12 b(e)g(q)g(I)g(d)25 b(;)399
+509 y(b)10 b(o)g(o)g(l)669 b(e)11 b(o)g(f)23 b(;)398
+608 y(o)8 b(p)g(a)g(q)g(u)g(e)118 b(d)10 b(a)g(t)g(a)19
+b Fb(<)o(>)o Fh(;)2 708 y Fc(g)12 b Fh(;)p Black Black
+-9 844 a Ff(r)m(eqId)r Fh(:)39 b(The)27 b Ff(r)m(eqId)h
+Fh(recei)n(v)o(ed)e(by)h(the)g(serv)o(er)g(from)f(the)i(client)-9
+944 y(during)16 b(the)j(initial)f(asynchronous)e(read)h(request.)24
+b(This)19 b(is)g(used)-9 1044 y(by)g(the)i(client)f(to)g(identify)f
+(the)h(o)n(wner)f(of)h(the)h(request.)-9 1243 y Ff(eof)56
 b Fh(:)73 b(A)44 b(boolean)e(v)n(alue)h(indicating)g(if)h(the)g(end)f
-(of)h(the)-9 273 y(\002le)20 b(has)h(been)e(reached.)-9
-472 y Ff(data)g Fh(:)26 b(Requested)19 b(\002le)i(data.)-9
-671 y(On)53 b(recei)n(ving)e(the)j(callback)e(request)h(from)f(the)h
-(serv)o(er)m(,)-9 771 y(client)65 b(forw)o(ards)f(the)h(data)h(to)f
-(the)g(respecti)n(v)o(e)g(o)n(wner)-9 871 y(based)44
+(of)h(the)-9 1342 y(\002le)20 b(has)h(been)e(reached.)-9
+1542 y Ff(data)g Fh(:)26 b(Requested)19 b(\002le)i(data.)-9
+1741 y(On)53 b(recei)n(ving)e(the)j(callback)e(request)h(from)f(the)h
+(serv)o(er)m(,)-9 1841 y(client)65 b(forw)o(ards)f(the)h(data)h(to)f
+(the)g(respecti)n(v)o(e)g(o)n(wner)-9 1940 y(based)44
 b(on)g(the)g Ff(r)m(eqId)p Fh(.)97 b(Then)44 b(the)h(client)f(responds)
-f(with)-9 970 y Ff(CB)p 102 970 25 4 v 30 w(ASYNC)p 381
-970 V 30 w(READ4r)m(es)19 b Fh(to)i(the)f(serv)o(er)-5
-b(.)4 1158 y Fg(s)13 b(t)g(r)g(u)g(c)g(t)64 b Fh(C)r(B)p
-460 1158 V 34 w(A)r(S)r(Y)r(N)r(C)p 783 1158 V 32 w(R)r(E)r(A)r(D)r(4)r
-(r)r(e)r(s)s Fc(f)405 1258 y Fh(n)15 b(f)g(s)h(s)g(t)f(a)h(t)f(4)480
-b(s)16 b(t)f(a)h(t)g(u)f(s)29 b(;)2 1357 y Fc(g)12 b
-Fh(;)p Black Black -9 1564 a Ff(status)26 b Fh(:)39 b(Indicates)26
-b(the)g(asynchronous)e(read)i(callback)g(status)-9 1664
+f(with)-9 2040 y Ff(CB)p 102 2040 V 30 w(ASYNC)p 381
+2040 V 30 w(READ4r)m(es)19 b Fh(to)i(the)f(serv)o(er)-5
+b(.)4 2176 y Fg(s)13 b(t)g(r)g(u)g(c)g(t)64 b Fh(C)r(B)p
+460 2176 V 34 w(A)r(S)r(Y)r(N)r(C)p 783 2176 V 32 w(R)r(E)r(A)r(D)r(4)r
+(r)r(e)r(s)s Fc(f)405 2276 y Fh(n)15 b(f)g(s)h(s)g(t)f(a)h(t)f(4)480
+b(s)16 b(t)f(a)h(t)g(u)f(s)29 b(;)3 2375 y Fc(g)12 b
+Fh(;)p Black Black -9 2512 a Ff(status)26 b Fh(:)39 b(Indicates)26
+b(the)g(asynchronous)e(read)i(callback)g(status)-9 2611
 y(from)20 b(the)h(client.)29 b(On)21 b(success,)i(status)f(will)g(be)h
-Fe(N)t(F)t(S)t Fh(4)p 1595 1664 V 34 w Fe(O)t(K)h Fh(else)-9
-1764 y(the)33 b(corresponding)d(error)i(message)h(will)h(be)f(passed)g
-(to)h(the)-9 1863 y(serv)o(er)-5 b(.)-9 2092 y Fi(5)99
-b(Ev)o(aluation)-9 2263 y Fh(W)-7 b(e)23 b(ha)n(v)o(e)e(ran)h(our)f(e)o
-(xperiments)f(by)i(running)d(the)j(NFS)h(Gane-)-9 2363
+Fe(N)t(F)t(S)t Fh(4)p 1595 2611 V 34 w Fe(O)t(K)h Fh(else)-9
+2711 y(the)33 b(corresponding)d(error)i(message)h(will)h(be)f(passed)g
+(to)h(the)-9 2810 y(serv)o(er)-5 b(.)-9 2989 y Fi(5)99
+b(Ev)o(aluation)-9 3118 y Fh(W)-7 b(e)23 b(ha)n(v)o(e)e(ran)h(our)f(e)o
+(xperiments)f(by)i(running)d(the)j(NFS)h(Gane-)-9 3218
 y(sha)28 b(serv)o(er)g(on)g(Amazon)f(EC2)i(and)f(Pynfs)g(client)g(on)g
-(the)h(lo-)-9 2463 y(cal)h(machine.)55 b(W)-7 b(e)32
+(the)h(lo-)-9 3317 y(cal)h(machine.)55 b(W)-7 b(e)32
 b(ha)n(v)o(e)e(decided)f(to)i(run)f(our)f(e)o(xperiments)-9
-2562 y(on)21 b(EC2)h(as)h(we)f(w)o(anted)f(to)h(e)n(v)n(aluate)f(our)g
-(asynchronous)e(read)-9 2662 y(operation)g(in)i(an)h(en)m(vironment)c
-(closer)j(to)g(the)g(real)h(w)o(orld)e(sce-)-9 2762 y(narios.)47
+3417 y(on)21 b(EC2)h(as)h(we)f(w)o(anted)f(to)h(e)n(v)n(aluate)f(our)g
+(asynchronous)e(read)-9 3517 y(operation)g(in)i(an)h(en)m(vironment)c
+(closer)j(to)g(the)g(real)h(w)o(orld)e(sce-)-9 3616 y(narios.)47
 b(As)28 b(usually)f(in)h(the)g(real)g(w)o(orld)f(clients)h(and)f(serv)o
-(ers)-9 2861 y(will)19 b(be)g(on)f(dif)n(ferent)f(netw)o(orks)h(and)h
-(in)f(this)i(w)o(ay)f(we)g(are)g(e)n(v)o(en)-9 2961 y(considering)h
+(ers)-9 3716 y(will)19 b(be)g(on)f(dif)n(ferent)f(netw)o(orks)h(and)h
+(in)f(this)i(w)o(ay)f(we)g(are)g(e)n(v)o(en)-9 3815 y(considering)h
 (the)i(netw)o(ork)f(latenc)o(y)g(in)m(v)n(olv)o(ed)f(in)i(sending)f
-(and)-9 3060 y(recei)n(ving)g(the)i(requests.)32 b(W)-7
+(and)-9 3915 y(recei)n(ving)g(the)i(requests.)32 b(W)-7
 b(e)24 b(ha)n(v)o(e)e(e)n(v)n(aluated)f(asynchronous)-9
-3160 y(read)34 b(operation)e(based)i(on)h(tw)o(o)f(metrics,)k(one)c(is)
-i(the)e(com-)-9 3260 y(pletion)c(time)h(and)f(the)h(other)f(is)i(the)f
-(throughput.)54 b(W)-7 b(e)32 b(ha)n(v)o(e)-9 3359 y(compared)27
+4015 y(read)34 b(operation)e(based)i(on)h(tw)o(o)f(metrics,)k(one)c(is)
+i(the)e(com-)-9 4114 y(pletion)c(time)h(and)f(the)h(other)f(is)i(the)f
+(throughput.)54 b(W)-7 b(e)32 b(ha)n(v)o(e)-9 4214 y(compared)27
 b(our)i(results)i(with)f(the)f(normal)g(read)g(request.The)-9
-3459 y(data)f(size)h(we)g(read)f(in)g(performing)e(normal)h(read)h(and)
-g(asyn-)-9 3559 y(chronous)22 b(read)i(are)g(512)g(bytes,)h(1KB,)g(1MB)
-f(and)g(2MB.)h(The)-9 3658 y(belo)n(w)15 b(graph)f(in)i(Fig2)g(sho)n
-(ws)g(the)g(results)g(of)f(these)h(operations.)74 3777
+4314 y(data)f(size)h(we)g(read)f(in)g(performing)e(normal)h(read)h(and)
+g(asyn-)-9 4413 y(chronous)22 b(read)i(are)g(512)g(bytes,)h(1KB,)g(1MB)
+f(and)g(2MB.)h(The)-9 4513 y(belo)n(w)15 b(graph)f(in)i(Fig2)g(sho)n
+(ws)g(the)g(results)g(of)f(these)h(operations.)74 4612
 y(From)45 b(the)i(abo)o(v)o(e)e(graph)g(we)h(can)h(observ)o(e)e(that)h
-(there)-9 3877 y(is)i(no/minute)e(o)o(v)o(erhead)f(in)m(v)n(olv)o(ed)g
-(in)j(performing)c(asyn-)-9 3976 y(chronous)23 b(read)h(operation)g
-(compared)f(to)i(normal)f(read)g(oper)n(-)-9 4076 y(ation.)59
+(there)-9 4712 y(is)i(no/minute)e(o)o(v)o(erhead)f(in)m(v)n(olv)o(ed)g
+(in)j(performing)c(asyn-)-9 4812 y(chronous)23 b(read)h(operation)g
+(compared)f(to)i(normal)f(read)g(oper)n(-)-9 4911 y(ation.)59
 b(So)32 b(this)g(result)g(suggests)f(that)h(the)g(we)g(can)g(perform)-9
-4175 y(asynchronous)21 b(read)i(instead)g(of)h(normal)f(read)g(in)h
-(all)g(the)g(sce-)-9 4275 y(narios)g(where)h(client)h(does)f(not)g
-(require)f(data)h(to)h(continue)e(its)-9 4375 y(operations)18
-b(as)j(there)f(is)h(no)f(o)o(v)o(erhead.)74 4494 y(The)46
+5011 y(asynchronous)21 b(read)i(instead)g(of)h(normal)f(read)g(in)h
+(all)g(the)g(sce-)-9 5111 y(narios)g(where)h(client)h(does)f(not)g
+(require)f(data)h(to)h(continue)e(its)-9 5210 y(operations)18
+b(as)j(there)f(is)h(no)f(o)o(v)o(erhead.)74 5310 y(The)46
 b(ne)o(xt)h(metric)g(we)g(ha)n(v)o(e)g(e)n(v)n(aluated)f(is)i
-(throughput)-9 4593 y(achie)n(v)o(ed)26 b(when)h(using)g(asynchronous)e
-(read)i(operation.)46 b(W)-7 b(e)-9 4693 y(ha)n(v)o(e)17
-b(observ)o(ed)f(that)i(the)g(clients)h(can)f(achie)n(v)o(e)e(better)i
-(through-)-9 4792 y(put)d(on)g(using)h(asynchronous)d(compared)g(to)j
-(normal)f(read.)23 b(The)-9 4892 y(belo)n(w)c(graph)g(sho)n(ws)h(the)g
-(results)h(of)f(our)f(e)n(v)n(aluation.)74 5011 y(As)h(we)g(can)f
-(observ)o(e)f(from)g(the)i(graph)e(the)h(throughput)d(gain)-9
-5111 y(compared)j(to)j(normal)f(read)g(will)i(be)e(proportional)e(to)j
-(the)g(size)-9 5210 y(of)31 b(the)g(data)g(we)h(are)f(reading.)57
-b(When)31 b(these)g(asynchronous)-9 5310 y(read)36 b(requests)h(are)h
-(batched)e(we)h(can)g(e)n(v)o(en)g(observ)o(e)f(much)-9
-5409 y(higher)18 b(throughput)g(in)i(case)h(of)e(asynchronous)f(read.)p
-Black Black 2025 74 a Fi(6)99 b(Ackno)o(wledgements)2025
-203 y Fh(W)-7 b(e)26 b(wish)e(to)h(e)o(xpress)f(our)g(sincere)g
-(gratitude)f(to)h(Ming)g(Chen,)2025 303 y(the)k(sponsor)f(of)h(the)g
+(throughput)-9 5409 y(achie)n(v)o(ed)26 b(when)h(using)g(asynchronous)e
+(read)i(operation.)46 b(W)-7 b(e)p Black Black 2025 74
+a(ha)n(v)o(e)17 b(observ)o(ed)g(that)h(the)g(clients)g(can)g(achie)n(v)
+o(e)f(better)h(through-)2025 173 y(put)d(on)h(using)f(asynchronous)e
+(compared)h(to)i(normal)e(read.)23 b(The)2025 273 y(belo)n(w)d(graph)e
+(sho)n(ws)j(the)f(results)g(of)g(our)g(e)n(v)n(aluation.)2108
+372 y(As)g(we)g(can)f(observ)o(e)f(from)h(the)g(graph)f(the)i
+(throughput)c(gain)2025 472 y(compared)k(to)i(normal)e(read)h(will)i
+(be)f(proportional)d(to)j(the)f(size)2025 572 y(of)31
+b(the)g(data)h(we)f(are)g(reading.)57 b(When)31 b(these)h(asynchronous)
+2025 671 y(read)37 b(requests)g(are)g(batched)f(we)i(can)f(e)n(v)o(en)f
+(observ)o(e)g(much)2025 771 y(higher)19 b(throughput)e(in)j(case)h(of)f
+(asynchronous)d(read.)2025 957 y Fi(6)99 b(Ackno)o(wledgements)2025
+1086 y Fh(W)-7 b(e)26 b(wish)e(to)h(e)o(xpress)f(our)g(sincere)g
+(gratitude)f(to)h(Ming)g(Chen,)2025 1186 y(the)k(sponsor)f(of)h(the)g
 (project)f(for)h(his)h(guidance)d(and)i(encour)n(-)2025
-402 y(agement)16 b(in)i(carrying)d(out)i(our)f(project)h(w)o(ork.)23
-b(W)-7 b(e)18 b(thank)f(Prof.)2025 502 y(Erez)26 b(Zadok)g(for)g(pro)o
+1286 y(agement)16 b(in)i(carrying)d(out)i(our)f(project)h(w)o(ork.)23
+b(W)-7 b(e)18 b(thank)f(Prof.)2025 1385 y(Erez)26 b(Zadok)g(for)g(pro)o
 (viding)e(us)j(with)g(an)f(opportunity)e(to)j(e)o(x-)2025
-602 y(plore)19 b(and)h(enhance)f(NFS)i(as)g(part)f(of)f(the)i(course)e
-(project)g(.)2025 788 y Fi(Refer)n(ences)p Black 2025
-917 a Fh([1])p Black 40 w(V)-9 b(asily)19 b(T)-7 b(araso)o(v)i(.)25
+1485 y(plore)19 b(and)h(enhance)f(NFS)i(as)g(part)f(of)f(the)i(course)e
+(project)g(.)2025 1671 y Fi(Refer)n(ences)p Black 2025
+1800 a Fh([1])p Black 40 w(V)-9 b(asily)19 b(T)-7 b(araso)o(v)i(.)25
 b(Asynchronous)17 b(i/o)i(e)o(xplained.)24 b Fa(www)l(.)q(fsl.)2163
-1017 y(cs.)q(sun)o(ysb)m(.)q(edu/)7 b(v)n(ass/)g(linux-)t(a)q(io.)q(tx)
-q(t)f Fh(.)p Black 2025 1150 a([2])p Black 40 w(NFS-Ganesha.)54
+1900 y(cs.)q(sun)o(ysb)m(.)q(edu/)7 b(v)n(ass/)g(linux-)t(a)q(io.)q(tx)
+q(t)f Fh(.)p Black 2025 2033 a([2])p Black 40 w(NFS-Ganesha.)54
 b(Nfsv4-dele)o(gations.)c Fa(https:)5 b(//)i(github)m(.)q(com/)2163
-1249 y(nfs-)t(ganesha/)g(nfs-)t(ganesha/)g(wi)q(ki/)h(NFSv4-)d(Del)q(e)
-o(gat)q(io)q(ns)g Fh(.)p Black 2025 1382 a([3])p Black
+2133 y(nfs-)t(ganesha/)g(nfs-)t(ganesha/)g(wi)q(ki/)h(NFSv4-)d(Del)q(e)
+o(gat)q(io)q(ns)g Fh(.)p Black 2025 2265 a([3])p Black
 40 w(Pynfs.)24 b(Python)16 b(nfs.)24 b Fa(https:)5 b(//)i(github)m(.)q
-(com/)g(kofe)q(mann/)h(pynfs/)g(tr)q(ee)q(/)2163 1482
-y(master/)f(nfs4.)q(1)g Fh(.)p Black 2025 1614 a([4])p
+(com/)g(kofe)q(mann/)h(pynfs/)g(tr)q(ee)q(/)2163 2365
+y(master/)f(nfs4.)q(1)g Fh(.)p Black 2025 2498 a([4])p
 Black 40 w(K)n(endrick)25 b(Smith)h(and)g(Andy)f(Adamson.)47
-b(Linux)25 b(source)2163 1714 y(code.)k Fa(http:)5 b(//)i(lxr)l(.)q
+b(Linux)25 b(source)2163 2597 y(code.)k Fa(http:)5 b(//)i(lxr)l(.)q
 (free-)t(ele)q(ct)q(rons.)q(com/)h(sourc)q(e/)g(fs/)g(nfs)d
-Fh(.)p Black 2025 1847 a([5])p Black 40 w(IETF)-7 b(.)69
+Fh(.)p Black 2025 2730 a([5])p Black 40 w(IETF)-7 b(.)69
 b(External)31 b(data)i(representation)d(standard.)68
-b Fa(http:)2163 1947 y(//)7 b(tools.)q(ietf.)q(or)o(g/)g(html/)h(rfc4)q
+b Fa(http:)2163 2830 y(//)7 b(tools.)q(ietf.)q(or)o(g/)g(html/)h(rfc4)q
 (506.)q(ht)q(ml)g Fh(.)p Black 1929 5646 a(5)p Black
 eop end
 %%Trailer

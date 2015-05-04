@@ -22,7 +22,7 @@ struct ASYNC_READ4args{
 \hfill \break \newline
 \noindent\textit{count}: Number of bytes to read from the requested file.
 \hfill \break \newline
-\noindent\textit{timeout}: Number of bytes to read from the requested file.
+\noindent\textit{timeout}: \textit{timeout} is a configurable feild in milliseconds. This feild specifies the maximum time that the server can take to respond with a callback once it recievies the asynchronous read request. This feild is important for the client to identify server crashes and any network outages. If the client doesn't recieve the response in the specified time, it treats the request as a failure and resends the request.     
 \hfill \break \newline
 \noindent On receiving the request from the client, the server performs the initial checks. Then the server responds with \textsc{ASYNC\_READ4res} to the client. Now we will explain the status passed as part of \textsc{ASYNC\_READ4res} to the client.  
 
@@ -70,7 +70,8 @@ struct CB_ASYNC_READ4res{
 \end{lstlisting}
 
 \noindent\textit{status} : Indicates the asynchronous read callback status from the client. On success, status will be \textsc{nfs4\_ok} else the corresponding error message will be passed to the server.
+\subsection{Implementation in pynfs}
 
-
+\subsection{Implementation in NFS-Ganesha}
 
 
