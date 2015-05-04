@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2015.3.15)  3 MAY 2015 21:57
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2014.8.27)  4 MAY 2015 14:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -206,141 +206,152 @@ LaTeX Font Info:    Font shape `OMS/ptm/m/it' in size <12> not available
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 5.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 8.
 
-Underfull \hbox (badness 1048) in paragraph at lines 3--6
-\OT1/ptm/m/n/10 re-quests to the server in the ab-sence of inter-client
+Underfull \hbox (badness 2564) in paragraph at lines 3--9
+\OT1/ptm/m/n/10 I/O op-er-a-tions on a NFS mounted de-vice em-ploy
  []
 
 
-Underfull \hbox (badness 1253) in paragraph at lines 3--6
-\OT1/ptm/m/n/10 asyn-chronous I/O, where the server can re-spond to
- []
-
-
-Underfull \hbox (badness 1286) in paragraph at lines 3--6
-\OT1/ptm/m/n/10 the client re-quests af-ter fetch-ing the data from the
- []
-
-
-Underfull \hbox (badness 1067) in paragraph at lines 3--6
-\OT1/ptm/m/n/10 /tex-ti-tlibaio trig-ger re-quests se-quen-tially, wait-ing for
+Underfull \hbox (badness 10000) in paragraph at lines 3--9
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3--6
+Underfull \hbox (badness 2903) in paragraph at lines 3--9
+\OT1/ptm/m/n/10 We pro-pose Asyn-chronous read, where the server
+ []
+
+
+Underfull \hbox (badness 1314) in paragraph at lines 3--9
+\OT1/ptm/m/n/10 pro-cess-ing to im-prove through-put on a per pro-cess
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--9
 
  []
 
-) (./intro.tex) (./bg.tex
+) (./intro.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [1
 
 
-]
+])
+(./bg.tex
 File: figures/sequence_read.eps Graphic file (type eps)
-
-<figures/sequence_read.eps>
+ <figures/sequence_read.eps>
 File: figures/sequence_asyncread.eps Graphic file (type eps)
- <figures/sequence_asyncread.eps>) (./design.tex
+ <figures/sequence_asyncread.eps>)
+(./design.tex
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ¢ in font ptmr7t!
 Missing character: There is no â in font ptmri7t!
 Missing character: There is no € in font ptmri7t!
 Missing character: There is no ¢ in font ptmri7t!
-
-[2]) (./implementation.tex
+ [2]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [3]
+ [3])
+(./implementation.tex
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 6.
 
-Underfull \hbox (badness 1442) in paragraph at lines 15--26
+Underfull \hbox (badness 1442) in paragraph at lines 15--28
 \OT1/ptm/m/it/10 ASYNC[]READ4args \OT1/ptm/m/n/10 : The client sends these ar-g
 u-
  []
 
 
-Underfull \hbox (badness 1436) in paragraph at lines 15--26
+Underfull \hbox (badness 1436) in paragraph at lines 15--28
 \OT1/ptm/m/n/10 ment struc-ture as part of the ini-tial re-quest to the
  []
 
 
-Underfull \hbox (badness 2469) in paragraph at lines 15--26
+Underfull \hbox (badness 2469) in paragraph at lines 15--28
 \OT1/ptm/m/n/10 server. De-tailed ex-pla-na-tion of the ar-gu-ments in
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 15--26
+Underfull \hbox (badness 10000) in paragraph at lines 15--28
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 15--26
+Underfull \hbox (badness 10000) in paragraph at lines 15--28
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 15--26
+Underfull \hbox (badness 10000) in paragraph at lines 15--28
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 15--26
+Underfull \hbox (badness 10000) in paragraph at lines 15--28
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 15--26
+Underfull \hbox (badness 10000) in paragraph at lines 15--28
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 32--36
+Underfull \hbox (badness 1132) in paragraph at lines 15--28
+\OT1/ptm/m/n/10 server can take to re-spond with a call-back once it
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 15--28
 
  []
 
 
-Underfull \hbox (badness 2726) in paragraph at lines 32--36
+Underfull \hbox (badness 10000) in paragraph at lines 34--38
+
+ []
+
+
+Underfull \hbox (badness 2726) in paragraph at lines 34--38
 \OT1/ptm/m/n/10 Let us now un-der-stand the struc-ture used by the
  []
 
-LaTeX Font Info:    Try loading font information for OML+ptm on input line 52.
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omlptm.fd
+[4]
+LaTeX Font Info:    Try loading font information for OML+ptm on input line 54.
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omlptm.fd
 File: omlptm.fd 
 )
 LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <10> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 52.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 54.
 
-Underfull \hbox (badness 10000) in paragraph at lines 56--63
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 56--63
+Underfull \hbox (badness 10000) in paragraph at lines 58--65
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 56--63
+Underfull \hbox (badness 10000) in paragraph at lines 58--65
 
  []
 
 
-Underfull \hbox (badness 1859) in paragraph at lines 56--63
+Underfull \hbox (badness 10000) in paragraph at lines 58--65
+
+ []
+
+
+Underfull \hbox (badness 1859) in paragraph at lines 58--65
 \OT1/ptm/m/n/10 On re-ceiv-ing the call-back re-quest from the server,
  []
 
 
-Underfull \hbox (badness 4752) in paragraph at lines 56--63
+Underfull \hbox (badness 4752) in paragraph at lines 58--65
 \OT1/ptm/m/n/10 client for-wards the data to the re-spec-tive owner
  []
 
-) (./evaluation.tex [4]
+) (./evaluation.tex
 Underfull \hbox (badness 1048) in paragraph at lines 6--7
 \OT1/ptm/m/n/10 is no/minute over-head in-volved in per-form-ing asyn-
  []
@@ -357,10 +368,10 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 Here is how much of TeX's memory you used:
  3189 strings out of 493305
  44731 string characters out of 6139897
- 134450 words of memory out of 5000000
+ 133450 words of memory out of 5000000
  6600 multiletter control sequences out of 15000+600000
  13309 words of font info for 36 fonts, out of 8000000 for 9000
  958 hyphenation exceptions out of 8191
  34i,9n,49p,2473b,1117s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.dvi (5 pages, 29844 bytes).
+Output written on main.dvi (5 pages, 32064 bytes).
