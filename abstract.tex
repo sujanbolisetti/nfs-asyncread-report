@@ -1,0 +1,19 @@
+\begin{abstract}
+
+NFS is a highly popular protocol that allows fast, seamless sharing of files across the network. The NFS protocol has added several new features as part of the latest revision. One of the efficient features that gained popularity in NFS version 4 is the callback operation. Callbacks allow servers to make an RPC directed at client. Right now callbacks provide an efficient way for delegating a file to the client by avoiding repeated requests to the server in the absence of inter-client conflicts. Callbacks can also be used to support true asynchronous I/O, where the server can respond to the client requests after fetching the data from the disk. Current asynchronous I/O implementations like /textit{libaio} trigger requests sequentially, waiting for the reply to each of the requests before triggering the next. By using callbacks, clients can trigger multiple I/O requests concurrently reducing the wait time for the client. We are aiming to implement asynchronous read operation using callbacks on NFS Ganesha and test it using Pynfs as a client.
+\hfill \break \newline
+\noindent\textbf{Acronyms}\hspace{2mm}  NFS (Network File System), RPC (Remote Procedure Call)
+
+\end{abstract}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% For Emacs:
+% Local variables:
+% fill-column: 70
+% End:
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% For Vim:
+% vim:textwidth=70
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% LocalWords:
