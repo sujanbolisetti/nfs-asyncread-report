@@ -1,6 +1,6 @@
-\section{Implementation of Asynchronous Read in Pynfs}
-
-Currently we have implemented asynchronous read using Pynfs in NFS version 4.1. We generated the request and response structures for our asynchronous read using the External Data Representation (XDR) \cite{XDR}. External Data Representation (XDR) is a standard data serialization format. XDR allows the data to be transferred seamlessly between different kinds of systems. Let us now look at each of these structures in detail.
+\section{Implementation of Asynchronous Read}
+\subsection{XDR}
+We generated the request and response structures for our asynchronous read using the External Data Representation (XDR) \cite{XDR}. External Data Representation (XDR) is a standard data serialization format. XDR allows the data to be transferred seamlessly between different kinds of systems. Let us now look at each of these structures in detail.
 
 \begin{lstlisting}
 struct ASYNC_READ4args{
@@ -21,6 +21,8 @@ struct ASYNC_READ4args{
 \noindent\textit{offset} : Offset (from the start of the file) at which the read has to start in the file. 
 \hfill \break \newline
 \noindent\textit{count}: Number of bytes to read from the requested file.
+\hfill \break \newline
+\noindent\textit{timeout}: Number of bytes to read from the requested file.
 \hfill \break \newline
 \noindent On receiving the request from the client, the server performs the initial checks. Then the server responds with \textsc{ASYNC\_READ4res} to the client. Now we will explain the status passed as part of \textsc{ASYNC\_READ4res} to the client.  
 
