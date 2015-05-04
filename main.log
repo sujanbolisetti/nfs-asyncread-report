@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2014.8.27)  4 MAY 2015 14:16
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2014.8.27)  4 MAY 2015 14:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -300,6 +300,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 15--28
  []
 
 
+Underfull \hbox (badness 1132) in paragraph at lines 15--28
+\OT1/ptm/m/n/10 server can take to re-spond with a call-back once it
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 15--28
 
  []
@@ -363,10 +368,10 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 Here is how much of TeX's memory you used:
  3189 strings out of 493305
  44731 string characters out of 6139897
- 132450 words of memory out of 5000000
+ 133450 words of memory out of 5000000
  6600 multiletter control sequences out of 15000+600000
  13309 words of font info for 36 fonts, out of 8000000 for 9000
  958 hyphenation exceptions out of 8191
  34i,9n,49p,2473b,1117s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.dvi (5 pages, 31448 bytes).
+Output written on main.dvi (5 pages, 32064 bytes).
