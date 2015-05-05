@@ -17,21 +17,6 @@ A brief overview on Linux asynchronous I/O ,NFS Ganesha and about callbacks will
 
 \end{enumerate}
 
-\begin{figure*}[htp]
-\centering
-\includegraphics[scale=0.75]{figures/sequence_read.eps}
-\caption{NFS Read Sequence Diagram}
-\label{fig:NFSRead}
-\end{figure*}
-
-\begin{figure*}[htp]
-\centering
-\includegraphics[scale=0.75]{figures/sequence_asyncread.eps}
-\caption{NFS Asynchronous Read Sequence Diagram}
-\label{fig:NFSAsyncRead}
-\end{figure*}
-
-
 Asynchronous I/O also works on NFS mounted files. But the underlying NFS stub initiates each of these requests and waits on the response synchronously. Using callbacks, these requests can be triggered concurrently. Callbacks provides a mechanism for the server to access the client. The client provides the server, its callback program number and port number using \textsc{setclientid}. The server does a backward path existence check before granting the delegation to the client. This check is done using \textsc{cb\_null} callback. The use of callbacks is not to be depended upon until the client has proven its ability to receive them. Thus in the implementation of the asynchronous I/O using callbacks, we need to follow the callback initiation steps, which include checking the existence of the backward path. If these checks do not succeed, the asynchronous I/O will fall back to the existing synchronous I/O mechanism. If the checks succeed, the server uses the callbacks to send data to the client.
 
    As we have mentioned in section 1 that NFS Ganesha is an user level implementation of NFS Server. It has a capability to serve multiple file systems at the same time. The other advantage of NFS Ganesha is, it manages huge meta-data cache. Because of this huge cache it can serve most of the nfs requests very fast. NFS Ganesha is built heavily on pthreads.

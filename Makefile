@@ -8,6 +8,7 @@ SRCS=	$(NAME).tex		\
         evaluation.tex          \
 	bg.tex			\
 	design.tex		\
+	discussion.tex          \
 
 # extre dependencies
 EXTRAS=smr.bib figures/lba-ind-example.eps
