@@ -31,6 +31,7 @@ struct ASYNC_READ4res{
 	nfsstat4	  status;
 };
 \end{lstlisting}
+
 \textit{status} : Indicates the status corresponding to initial permission checks on the requested file.
 On receiving the asynchronous read request on the server side, we are checking the client's share/delegation on the requested file. On success we will return \textsc{nfs4\_ok}.  If the checks fail, we are returning appropriate error status.
 \hfill \break \newline
@@ -75,17 +76,17 @@ struct CB_ASYNC_READ4res{
 
 We will now discuss the existing implementation of \textsc{NFS\_READ} in NFS Ganesha. Understanding \textsc{NFS\_READ} is important as we have reused the design of \textsc{NFS\_READ} for performing actual read during callback in asynchronous read operation.
 
+
+\subsection{Implementation of NFS Read in Pynfs Client}
+ 
+In \textsc{NFSv4.0} and above, all the nfs operation are performed using compounds. Compound can consist of multiple requests. So, for performing the read operation, the client will prepare a nfs4\_compound request consisting of two operations.The first operation is the \textsc{PUTFH}, which  basically updates the current file handle to the file handle on which the client intends to perform the read. The other operation is the actual read operation, which basically reads a content from a specified file from the given offset. The read operation takes three arguments as input, the first argument is the  \textsc{stateid}. The state id helps the server to check the client access on the requested file. The client usually obtains the \textsc{stateid} in response for the open file request.The second  argument is the offset, which specifies the server the location from where the read should start. The last argument specifies number of bytes to read from the given offset.The client will then initiate the nfs read request. It will then traverse through the RPC layer and gets encoded in the XDR layer for sending on the network.
+
 \begin{figure*}
 \centering
 \includegraphics[scale=0.7]{figures/AsyncRead.eps}
 \caption{NFS Asynchronous Read Architecture Diagram}
 \label{fig:NFSAsyncReadArch}
 \end{figure*}
-\FloatBarrier
-
-\subsection{Implementation of NFS Read in Pynfs Client}
- 
-In \textsc{NFSv4.0} and above, all the nfs operation are performed using compounds. Compound can consist of multiple requests. So, for performing the read operation, the client will prepare a nfs4\_compound request consisting of two operations.The first operation is the \textsc{PUTFH}, which  basically updates the current file handle to the file handle on which the client intends to perform the read. The other operation is the actual read operation, which basically reads a content from a specified file from the given offset. The read operation takes three arguments as input, the first argument is the  \textsc{stateid}. The state id helps the server to check the client access on the requested file. The client usually obtains the \textsc{stateid} in response for the open file request.The second  argument is the offset, which specifies the server the location from where the read should start. The last argument specifies number of bytes to read from the given offset.The client will then initiate the nfs read request. It will then traverse through the RPC layer and gets encoded in the XDR layer for sending on the network.
 
 \subsection{Implementation of NFS Read in Pynfs Server}
 
@@ -105,13 +106,8 @@ In \textsc{NFSv4.0} and above, all the nfs operation are performed using compoun
  Figure~\ref{fig:NFSAsyncReadArch} depicts the architecture diagram of \textsc{NFS\_ASYNCRead} in NFS Ganesha. The server on receiving the incoming asynchronous read request, it will notify the dispatcher threads for decoding the request. The dispatcher thread will decode the request and enqueue the worker queue for processing of the request. One of the worker thread will dequeue the request from the worker queue and process it. The processing of asynchronous read request involves preparing of an new nfs-request for the callback and then enqueue the request in worker queue. Immediately after the enqueue operation is successful the worker thread will respond to the client using \textsc{NFS4\_OK}.On receiving the initial response, client is not blocked any more and is free to perform further tasks. On the server side any other worker thread which is waiting on the worker queue for processing the new requests will the dequeue this new request and process it. This involves performing all the necessary checks like the \textsc{stateid} validation and read access validation. Once all the checks are passed the worker thread will perform the actual file system read/cache read depending on the presence of data. After reading the data the worker thread will prepare a callback request and perform the callback operation using \textsc{cb\_async\_read} operation. The callback request can be sent in two ways. One is the worker thread which has performed the actual read can sent the request and the other way is this worker thread can enqueue the callback request. Any other worker thread which is waiting on the worker queue will pick this request and identifies the request type as a \textsc{NFS\_CALL} and then performs the dispatch call operation for dispatching the callback to the client. 
  
  
-\begin{figure*}
-\centering
-\includegraphics[scale=0.7]{figures/Read.eps}
-\caption{NFS Read Architecture Diagram}
-\label{fig:NFSReadArch}
-\end{figure*}
-\FloatBarrier
+
+
 
 
 
