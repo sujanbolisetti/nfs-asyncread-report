@@ -1,17 +1,15 @@
 \textit{\emph{•\emph{\textit{•}}}}\section{Design}
 
-\begin{figure*}
-\centering
-\includegraphics[scale=0.75]{figures/AsyncSequence.eps}
-\caption{NFS Async Read Sequence Diagram}
-\label{fig:NFSAsyncRead}
-\end{figure*}
-
 \label{Design}
 
 On a normal NFS read the client waits till the server responds with the data. This involves server fetching the data from the slow disk. Thus the client is blocked until the server responds. Instead, NFS asynchronous read responds immediately without blocking the client until the data is ready. Before analysing the two versions of NFS reads, let us take a look at the initial steps performed by the client to acquire the \textit{stateid} required to perform a NFS read. First, the NFS client triggers an \textsc{op\_lookup} request to the server looking for the file. On finding the file the server responds with a /textit{filehandle} back to the client. The client then issues an \textsc{op\_open} on the /textit{filehandle}. On a successful open the server constructs an unique \textit{stateid} and returns it to the client along with the status. In case if the file is already opened,    then the above mentioned steps are skipped. The \textit{stateid} represents the state information of current open request. This state information includes, but is not limited to locking/share state, delegation state. Let us now analyse the sequence of steps involved in NFS Read (3.1) and then our asynchronous read using callback mechanism (3.2).
 
-
+\begin{figure*}
+\centering
+\includegraphics[scale=0.7]{figures/Read.eps}
+\caption{NFS Read Architecture Diagram}
+\label{fig:NFSReadArch}
+\end{figure*}
 
 \subsection{NFS READ}
 
@@ -26,12 +24,7 @@ Figure~\ref{fig:NFSAsyncRead} depicts the architecture diagram of the asynchrono
 In the case of asynchronous read, the client will send an \textsc{async\_read} request. On receiving the nfs request, the dispatcher thread as usual decode the request and populate the \textsc{async\_read} arguments in the appropriate structures and enqueue the request in the worker queue. The worker thread will dequeue the request and prepare an NFS request with the \textsc{async\_read} arguments and enqueue in the worker queue. Immediately after the enqueue operation is successful the worker thread will respond to the client using \textsc{NFS4\_OK}.On receiving the initial response, client is not blocked any more and is free to perform further tasks. On the server side any other worker thread which is waiting on the worker queue for processing the new requests will the dequeue this new request and process it. This involves performing all the necessary checks like the \textsc{stateid} validation and read access validation. Once all the checks are passed the worker thread will perform the actual file system read/cache read depending on the presence of data. After reading the data the worker thread will prepare a callback request and perform the callback operation using \textsc{cb\_async\_read} operation. Client on receiving the \textsc{cb\_async\_read} request identifies the request owner based on the \textsc{stateid}. Request owner can  be a process or a thread on the client that issued the request. Client on receiving the callback, responds with the \textsc{nfs4\_ok} back to the server or an error status if any. Now on the client side, the process or the thread that has initiated the request can be identified using \textit{stateid}. But the same thread might have triggered multiple requests. Thus we have added a unique field in the request called \textit{requestid}.  \textit{requestid} enables the process or the thread to uniquely identify the request among the multiple requests that it might have triggered. We also have added an another feild named  \textit{timeout} as part of  the asynchronous request to the server. \textit{timeout} enables the client to specify the maximum time that the server can take to send a callback to the client. If the client does not recieve a callback in the mentioned  \textit{timeout}, the client treats the request as a failure and resends the request.
 
 
-\begin{figure*}
-\centering
-\includegraphics[scale=0.7]{figures/Read.eps}
-\caption{NFS Read Architecture Diagram}
-\label{fig:NFSReadArch}
-\end{figure*}
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

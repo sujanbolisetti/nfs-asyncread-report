@@ -1,0 +1,423 @@
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2015.3.15)  5 MAY 2015 12:34
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**main.tex
+(./main.tex
+LaTeX2e <2011/06/27>
+Babel <3.9h> and hyphenation patterns for 78 languages loaded.
+(./template/usetex-v1.cls
+Document Class: usetex-v1 2002/10/31 v1.2 usetex Usenix article class
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: dvips.def on input line 130.
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/dvips.def
+File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/dvipsnam.def
+File: dvipsnam.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+))
+\@discard=\box26
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/times.sty
+Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
+)
+\@sectionaboveskip=\skip43
+\@sectionbelowskip=\skip44
+\@subsectionaboveskip=\skip45
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/epsfig.sty
+Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(./template/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: dvips.def on input line 91.
+)
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+\epsfxsize=\dimen105
+\epsfysize=\dimen106
+)
+(./template/url.sty
+\Urlmuskip=\muskip10
+Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/tabularx.sty
+Package: tabularx 1999/01/07 v2.07 `tabularx' package (DPC)
+
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
+Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
+\col@sep=\dimen107
+\extrarowheight=\dimen108
+\NC@list=\toks15
+\extratabsurround=\skip46
+\backup@length=\skip47
+)
+\TX@col@width=\dimen109
+\TX@old@table=\dimen110
+\TX@old@col=\dimen111
+\TX@target=\dimen112
+\TX@delta=\dimen113
+\TX@cols=\count87
+\TX@ftn=\toks16
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+Package: fancyvrb 2008/02/07
+
+Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix 
+<2008/02/07> (tvz)
+\FV@CodeLineNo=\count88
+\FV@InFile=\read1
+\FV@TabBox=\box27
+\c@FancyVerbLine=\count89
+\FV@StepNumber=\count90
+\FV@OutFile=\write3
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count91
+\lst@gtempboxa=\box28
+\lst@token=\toks17
+\lst@length=\count92
+\lst@currlwidth=\dimen114
+\lst@column=\count93
+\lst@pos=\count94
+\lst@lostspace=\dimen115
+\lst@width=\dimen116
+\lst@newlines=\count95
+\lst@lineno=\count96
+\lst@maxwidth=\dimen117
+
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2013/08/26 1.5b (Carsten Heinz)
+\lst@fmtcurrindent=\dimen118
+\lst@newlinesensured=\count97
+\c@lstnumber=\count98
+\lst@skipnumbers=\count99
+\lst@framebox=\box29
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2013/08/26 1.5b listings configuration
+))
+Package: listings 2013/08/26 1.5b (Carsten Heinz)
+
+(/usr/share/texlive/texmf-dist/tex/latex/vmargin/vmargin.sty
+Package: vmargin 2004/07/15 V2.5 set document margins (VK)
+
+Package: vmargin 2004/07/15 V2.5 set document margins (VK)
+\PaperWidth=\dimen119
+\PaperHeight=\dimen120
+) (/usr/share/texlive/texmf-dist/tex/latex/cite/cite.sty
+LaTeX Info: Redefining \cite on input line 302.
+LaTeX Info: Redefining \nocite on input line 373.
+Package: cite 2010/09/10  v 5.3
+)
+(/usr/share/texlive/texmf-dist/tex/latex/placeins/placeins.sty
+Package: placeins 2005/04/18  v 2.2
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/alltt.sty
+Package: alltt 1997/06/16 v2.0g defines alltt environment
+)
+(/usr/share/texlive/texmf-dist/tex/latex/colortbl/colortbl.sty
+Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
+\everycr=\toks18
+\minrowclearance=\skip48
+)
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count100
+\float@exts=\toks19
+\float@box=\box30
+\@float@everytoks=\toks20
+\@floatcapt=\box31
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/xspace.sty
+Package: xspace 2009/10/20 v1.13 Space after command names (DPC,MH)
+) (./main.aux)
+\openout1 = `main.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 90.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+)
+\c@lstlisting=\count101
+
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2013/08/26 1.5b listings language file
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2013/08/26 1.5b (Carsten Heinz)
+)
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 160.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 160.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 160.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 160.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 160.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsptm.fd
+File: omsptm.fd 
+)
+LaTeX Font Info:    Font shape `OMS/ptm/m/it' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 160.
+ (./abstract.tex
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 7.
+
+Underfull \hbox (badness 2564) in paragraph at lines 3--8
+\OT1/ptm/m/n/10 I/O op-er-a-tions on a NFS mounted de-vice em-ploy
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--8
+
+ []
+
+
+Underfull \hbox (badness 2903) in paragraph at lines 3--8
+\OT1/ptm/m/n/10 We pro-pose Asyn-chronous read, where the server
+ []
+
+
+Underfull \hbox (badness 1314) in paragraph at lines 3--8
+\OT1/ptm/m/n/10 pro-cess-ing to im-prove through-put on a per pro-cess
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--8
+
+ []
+
+) (./intro.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [1
+
+
+])
+(./bg.tex
+File: figures/ReadSequence.eps Graphic file (type eps)
+ <figures/ReadSequence.eps>
+File: figures/AsyncSequence.eps Graphic file (type eps)
+ <figures/AsyncSequence.eps>) (./design.tex
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no ¢ in font ptmr7t!
+Missing character: There is no â in font ptmri7t!
+Missing character: There is no € in font ptmri7t!
+Missing character: There is no ¢ in font ptmri7t!
+File: figures/Read.eps Graphic file (type eps)
+<figures/Read.eps> [2]) (./implementation.tex
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 6.
+ [3]
+Underfull \hbox (badness 1442) in paragraph at lines 15--28
+\OT1/ptm/m/it/10 ASYNC[]READ4args \OT1/ptm/m/n/10 : The client sends these ar-g
+u-
+ []
+
+
+Underfull \hbox (badness 1436) in paragraph at lines 15--28
+\OT1/ptm/m/n/10 ment struc-ture as part of the ini-tial re-quest to the
+ []
+
+
+Underfull \hbox (badness 2469) in paragraph at lines 15--28
+\OT1/ptm/m/n/10 server. De-tailed ex-pla-na-tion of the ar-gu-ments in
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 15--28
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 15--28
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 15--28
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 15--28
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 15--28
+
+ []
+
+
+Underfull \hbox (badness 1132) in paragraph at lines 15--28
+\OT1/ptm/m/n/10 server can take to re-spond with a call-back once it
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 15--28
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 35--39
+
+ []
+
+
+Underfull \hbox (badness 2726) in paragraph at lines 35--39
+\OT1/ptm/m/n/10 Let us now un-der-stand the struc-ture used by the
+ []
+
+[4]
+LaTeX Font Info:    Try loading font information for OML+ptm on input line 55.
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omlptm.fd
+File: omlptm.fd 
+)
+LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <10> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 55.
+
+Underfull \hbox (badness 10000) in paragraph at lines 59--66
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 59--66
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 59--66
+
+ []
+
+
+Underfull \hbox (badness 1859) in paragraph at lines 59--66
+\OT1/ptm/m/n/10 On re-ceiv-ing the call-back re-quest from the server,
+ []
+
+
+Underfull \hbox (badness 4752) in paragraph at lines 59--66
+\OT1/ptm/m/n/10 client for-wards the data to the re-spec-tive owner
+ []
+
+[5]
+Underfull \hbox (badness 1259) in paragraph at lines 77--78
+[]\OT1/ptm/m/n/10 We will now dis-cuss the ex-ist-ing im-ple-men-ta-tion
+ []
+
+
+Underfull \hbox (badness 2564) in paragraph at lines 77--78
+\OT1/ptm/m/n/10 of \OT1/ptm/m/sc/10 NFS[]READ \OT1/ptm/m/n/10 in NFS Gane-sha. 
+Un-der-stand-ing
+ []
+
+File: figures/AsyncRead.eps Graphic file (type eps)
+<figures/AsyncRead.eps>
+Underfull \hbox (badness 2134) in paragraph at lines 94--94
+[]\OT1/ptm/b/n/12 Implementation NFS Read in NFS-
+ []
+
+
+Underfull \vbox (badness 4886) has occurred while \output is active []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 106--107
+\OT1/ptm/m/n/10 Figure 4[] de-picts the ar-chi-tec-ture di-a-gram of
+ []
+
+
+Underfull \hbox (badness 1527) in paragraph at lines 106--107
+\OT1/ptm/m/sc/10 NFS[]ASYNCRead \OT1/ptm/m/n/10 in NFS Gane-sha. The server
+ []
+
+
+Underfull \hbox (badness 1072) in paragraph at lines 106--107
+\OT1/ptm/m/n/10 read-/-cache read de-pend-ing on the pres-ence of data.
+ []
+
+) (./evaluation.tex [6]
+Underfull \hbox (badness 1048) in paragraph at lines 6--7
+\OT1/ptm/m/n/10 is no/minute over-head in-volved in per-form-ing asyn-
+ []
+
+
+Underfull \hbox (badness 1014) in paragraph at lines 8--9
+[]\OT1/ptm/m/n/10 The next met-ric we have eval-u-ated is through-put
+ []
+
+File: figures/Slotreuse.eps Graphic file (type eps)
+<figures/Slotreuse.eps>) (./discussion.tex) (./futurework.tex [7]
+Underfull \vbox (badness 5637) has occurred while \output is active []
+
+) (./ack.tex) (./main.bbl
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 22.
+) [8] (./main.aux) ) 
+Here is how much of TeX's memory you used:
+ 3275 strings out of 493305
+ 45986 string characters out of 6139897
+ 127903 words of memory out of 5000000
+ 6669 multiletter control sequences out of 15000+600000
+ 13309 words of font info for 36 fonts, out of 8000000 for 9000
+ 958 hyphenation exceptions out of 8191
+ 34i,9n,49p,2473b,1476s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+Output written on main.dvi (8 pages, 44268 bytes).
