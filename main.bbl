@@ -32,6 +32,17 @@ Pynfs.
 \newblock Python nfs.
 \newblock \url{https://github.com/kofemann/pynfs/tree/master/nfs4.1}.
 
+\bibitem{NFSGanesha}
+Venkateswararao Jujjuri.
+\newblock Nfs-ganesha.
+\newblock
+  \url{http://events.linuxfoundation.org/sites/events/files/slides/Collab14_nfsGanesha.pdf}.
+
+\bibitem{NFSv41rfc}
+M.~Eisler S.~Shepler, Ed.Storspeed.
+\newblock Nfsv4.1 rfc.
+\newblock \url{https://tools.ietf.org/html/rfc5661}.
+
 \bibitem{kernelCode}
 Kendrick Smith and Andy Adamson.
 \newblock Linux source code.
@@ -41,5 +52,17 @@ Kendrick Smith and Andy Adamson.
 IETF.
 \newblock External data representation standard.
 \newblock \url{http://tools.ietf.org/html/rfc4506.html}.
+
+\bibitem{NFSv4}
+Erez Zadok.
+\newblock Chapter 6: Nfs version 4.
+\newblock
+  \url{http://www3.cs.stonybrook.edu/~ezk/cse595-s15/presentations/ch1+6.pdf}.
+
+\bibitem{linuxsymp}
+Jacques-Charles~Lafoucrière Philippe~Deniel, Thomas~Leibovici.
+\newblock Ganesha, a multi-usage with large cache nfsv4 server.
+\newblock
+  \url{http://nfs-ganesha.sourceforge.net/files/nfs-ganesha-ols2007.pdf}.
 
 \end{thebibliography}
