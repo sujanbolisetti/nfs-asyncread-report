@@ -72,15 +72,16 @@ struct CB_ASYNC_READ4res{
 
 \noindent\textit{status} : Indicates the asynchronous read callback \textit{status} from the client. On success, status will be \textsc{nfs4\_ok} else the corresponding error message will be passed to the server.
 
-\begin{figure*}
-\centering
-\includegraphics[scale=1.0]{figures/Throughput.eps}
-\caption{Throughput for NFS Asynchronous read and normal NFS read on a flash storage}
-\label{fig:NFSThroughput}
-\end{figure*}
 
 We will now discuss the existing implementation of \textsc{nfs\_read} in NFS-Ganesha. Understanding \textsc{nfs\_read} is important as we have reused the design of \textsc{nfs\_read} for performing actual read during callback in asynchronous read operation.
 
+
+\begin{figure*}
+\centering
+\includegraphics[scale=1.0]{figures/InterstingObservation.eps}
+\caption{Intersting observation incase of two consequtive requests on a hard disk}
+\label{fig:InterstingObservation}
+\end{figure*}
 
 \subsection{Implementation of NFS READ in Pynfs Client}
  
@@ -95,12 +96,6 @@ Pynfs server on receiving the READ request, spawns a thread to process the reque
 
  The request processing in NFS-Ganesha is done by pthreads. Figure~\ref{fig:NFSReadArch} depicts the architecture diagram of \textsc{nfs\_read} in NFS-Ganesha. The dispatcher thread will listen for incoming \textsc{nfs request} but will not decode them. It will choose the least busy worker and add the request to its lists of requests to process. Duplicate request management is also done by the dispatcher thread. One of the worker thread will then dequeue the request from the worker queue and process it. The worker threads do most of the job. These threads are very core to the NFS processing in NFS-Ganesha. The processing of a read request involves validating the client access on the requested file. On success, the worker thread will decode it and use Cache Inode API and File Content API calls to perform the read required for this request. Once the server has retrieved the data successfully from the underlying file system, it will then send the response back to the client with the requested data.
   
-\begin{figure*}
-\centering
-\includegraphics[scale=1.0]{figures/completion_time.eps}
-\caption{Completion	Time for NFS Asynchronous read and normal NFS read on a flash storage}
-\label{fig:NFSCompletionTimes}
-\end{figure*}  
 
 \subsection{Implementation of NFS Asynchronous Read in Pynfs Client}
  
@@ -114,14 +109,12 @@ The client side operations for asynchronous read are similar to that of a normal
 
  Figure~\ref{fig:NFSAsyncReadArch} depicts the architecture diagram of \textsc{nfs\_asyncread} in NFS-Ganesha. The dispatcher thread will listen for incoming NFS requests but will not decode them. It will choose the least busy worker and add the request to its lists of requests to process. The worker thread then performs validation on the \textit{stateid}. If  the checks succeed, an \textsc{nfs4\_callback} request is enqueued back into the list of requests to be processed.  This involves preparing a new \textsc{nfs request} for the callback and then en-queuing the request into the worker queue. After en-queuing the callback, the worker thread responds with an \textsc{nfs4\_ok} back to the client. On receiving the initial response, client is freed from the blocking call and can perform further tasks. Now on the server side, a least busy worker will dequeue this new request and process it. This worker thread will perform the actual file system read/cache read depending on the presence of data. After reading the data, \textsc{cb\_async\_read} request is sent to the client via the callback channel. The worker thread which has performed the actual read dispatches the callback request to the client. 
  
-
 \begin{figure*}
 \centering
-\includegraphics[scale=1.0]{figures/InterstingObservation.eps}
-\caption{Intersting observation incase of two consequtive requests on a hard disk}
-\label{fig:InterstingObservation}
+\includegraphics[scale=0.6]{figures/performancesequence.eps}
+\caption{Throughput for NFS Asynchronous read and normal NFs read on a flash storage}
+\label{fig:performancesequence}
 \end{figure*}
-
 
 
 

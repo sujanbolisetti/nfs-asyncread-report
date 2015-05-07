@@ -3,10 +3,11 @@
 
 \begin{figure*}
 \centering
-\includegraphics[scale=0.6]{figures/performancesequence.eps}
-\caption{Throughput for NFS Asynchronous read and normal NFs read on a flash storage}
-\label{fig:performancesequence}
+\includegraphics[scale=0.7]{figures/Slotreuse.eps}
+\caption{NFS Asynchronous Read Slot Reuse Diagram}
+\label{fig:NFSSlotreuse}
 \end{figure*}
+
 
 	We have ran our experiments by running the NFS-Ganesha server on Amazon EC2 and Pynfs client on the local machine to replicate a real world application.  We have evaluated asynchronous read operation based on two metrics, one is the \textit{completion time} and the other is the \textit{throughput}.\textit{Completion time} is the total time taken for the completion of \textsc{NFS read} operation and \textsc{NFS asynchronous read} operation. \textit{Throughput} is a comparision between the time taken for the initial \textsc{nfs4\_ok} to reach the client incase of asynchronous read and the total time taken by the \textsc{NFS read}. We have compared our results with the normal read request. The data size we read in performing normal read and asynchronous read are 512 bytes, 1MB, 2MB and 10MB. 
 
@@ -23,12 +24,7 @@ Once the client recieves a \textsc{nfs4\_ok}  incase of asynchronous read from t
  Figure~\ref{fig:InterstingObservation} shows an intersting observation. When we have made two consecutive reads  using \textsc{NFS read} on a file of size 1GB. While the first read has a offset of 1MB, the second read has a offset of 512 KB. The size of the data read is 512KB in both the cases. The file offsets are choosen this way to prevent \textsc{read ahead} caching. While it has taken 88 milliseconds  in \textsc{NFS read} for both the requests to get completed, it has taken only 68 milliseconds for \textsc{NFS asynchronous read}. This can attributed to the scenario depicted  in   Figure~\ref{fig:performancesequence}. Incase of \textsc{NFS read}, second read request is made only after the client recieves the reply to the first request. Thus there is no chance for both of them to be scheduled together to the disk. But in the case of asynchronous read, Since the second request is triggered immediately after receiving the  \textsc{nfs4\_ok}  to the first one, the two requests can be scheduled together to the disk. Thus there is a time gain since the seek head does not have to do a full rotation to reach the second position as both the experiments are scheduled together.    
 
 
-\begin{figure*}
-\centering
-\includegraphics[scale=0.7]{figures/Slotreuse.eps}
-\caption{NFS Asynchronous Read Slot Reuse Diagram}
-\label{fig:NFSSlotreuse}
-\end{figure*}
+
 
 
 
