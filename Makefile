@@ -9,6 +9,7 @@ SRCS=	$(NAME).tex		\
 	bg.tex			\
 	design.tex		\
 	discussion.tex          \
+	related.tex		\
 	conclusion.tex          \
 
 # extre dependencies

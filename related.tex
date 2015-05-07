@@ -1,0 +1,5 @@
+\section{Related Work}
+\label{related} 
+
+	As the normal reads or writes are synchronous by default and the underlying disk is usually slow, researchers have tried several ways to make these operations asynchronous and to achieve higher throughput.  One such notable attempt was made using \textsc{rpciod} \cite{NFSv4} in NFSv3, its a daemon which merges the write requests and triggers them at once from the NFS client instead of triggering them individually. It is now combined with the NFS server as part of NFSv4.0. In particular, rpciod looks for consecutive writes to a file that can be combined into a larger sequential write. When \textsc{rpciod} has gathered enough writes, it sends them as one large NFS write request. This saves lots of network bandwidth and extra work for the NFS server.But the reads are still synchronous in NFS.  
+	
