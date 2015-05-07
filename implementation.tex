@@ -33,7 +33,7 @@ struct ASYNC_READ4res{
 \end{lstlisting}
 
 \textit{status} : Indicates the \textit{status} corresponding to initial permission checks on the requested file.
-On receiving the \textsc{asynchronous read} request on the server side, we are checking the client's share/delegation on the requested file. On success we will return \textsc{nfs}\oldstylenums{4}\textsc{\_ok}.  If the checks fail, we are returning appropriate error status.
+On receiving the \textsc{asynchronous read} request on the server side, we are checking the client's share/delegation on the requested file. On success we will return \textsc{nfs4\_ok}.  If the checks fail, we are returning appropriate error status.
 \hfill \break \newline
 \noindent Let us now understand the structure used by the server when making a callback to the client. The server passes \textit{CB\_ASYNC\_READ4args} as part of the request to the client. We will now look at each of the arguments in detail. 
 \begin{lstlisting}
@@ -46,7 +46,7 @@ union CB_ASYNC_READ4args
 };
 \end{lstlisting}
 
-\noindent The first argument in the callback request to the client is the status. If the data is fetched successfully from the local file system, the status will be \textsc{nfs4\_ok} . In case of an error, an appropriate error status will be sent to the client. If the data is fetched successfully, a second argument of type \textit{CB\_ASYNC\_READ4argsok} will also be passed in the callback to the client. Otherwise, only status will be passed. A detailed explanation of each of the fields in \textit{CB\_ASYNC\_READ4argsok} will follow.
+\noindent The first argument in the callback request to the client is the \textit{status}. If the data is fetched successfully from the local file system, the \textit{status} will be \textsc{nfs4\_ok}. In case of an error, an appropriate error \textit{status} will be sent to the client. If the data is fetched successfully, a second argument of type \textit{CB\_ASYNC\_READ4argsok} will also be passed in the callback to the client. Otherwise, only \textit{status} will be passed. A detailed explanation of each of the fields in \textit{CB\_ASYNC\_READ4argsok} will follow.
 
 \begin{lstlisting}
 struct CB_ASYNC_READ4argsok{
@@ -60,7 +60,7 @@ struct CB_ASYNC_READ4argsok{
 \hfill \break \newline
 \noindent\textit{eof} : A boolean value indicating if the end of the file has been reached.
 \hfill \break \newline
-\noindent\textit{data} : Requested file data.
+\noindent\textit{data} : Requested file \textit{data}.
 \hfill \break \newline
 \noindent On receiving the callback request from the server, client forwards the data to the respective owner based on the \textit{reqid}. Then the client responds with \textsc{CB\_ASYNC\_READ4res} to the server.
  
@@ -75,7 +75,7 @@ struct CB_ASYNC_READ4res{
 \begin{figure*}
 \centering
 \includegraphics[scale=1.0]{figures/Throughput.eps}
-\caption{Throughput for NFS Asynchronous read and normal NFs read on a flash storage}
+\caption{Throughput for NFS Asynchronous read and normal NFS read on a flash storage}
 \label{fig:NFSThroughput}
 \end{figure*}
 
@@ -84,7 +84,7 @@ We will now discuss the existing implementation of \textsc{nfs\_read} in NFS-Gan
 
 \subsection{Implementation of NFS READ in Pynfs Client}
  
-In \textsc{NFSv4.0} and above, all the NFS operation are performed using compound requests. A compound request can consist of multiple requests. The server will process the \textsc{compound} procedure by evaluating each of the operations within the \textsc{compound} procedure in order. For a normal read, the Pynfs client prepares a \textsc{nfs4\_compound} request consisting of two operations. The first operation is the \textsc{putfh}. \textsc{putfh} is used as the first operator in an \textsc{nfs request} to set the context for following operations. This operation replaces the current \textit{filehandle} with the \textit{filehandle} of the file to be read. It is then followed by an actual \textsc{read} operation. The \textsc{read} operation reads data from the regular file identified by the current \textit{filehandle}. Once the NFS clients sends the request, it waits for a configurable amount of time. If it does not receive the response in the stipulated time, an RPC timeout error will be signalled. Once the client receives the response, several validation checks are performed to identify the failures.
+From \textsc{NFSv4.0} and above, all the NFS operation are performed using compound requests. A compound request can consist of multiple requests. The server will process the compound procedure by evaluating each of the operations within the compound procedure in order. For a normal read, the Pynfs client prepares a \textsc{nfs4\_compound} request consisting of two operations. The first operation is the \textsc{putfh}. \textsc{putfh} is used as the first operator in an \textsc{nfs request} to set the context for following operations. This operation replaces the current \textit{filehandle} with the \textit{filehandle} of the file to be read. It is then followed by an actual \textsc{read} operation. The \textsc{read} operation reads data from the \textsc{regular file} identified by the current \textit{filehandle}. Once the NFS clients sends the request, it waits for a configurable amount of time. If it does not receive the response in the stipulated time, an RPC timeout error will be signalled. Once the client receives the response, several validation checks are performed to identify the failures.
 
 
 
@@ -93,12 +93,12 @@ Pynfs server on receiving the READ request, spawns a thread to process the reque
 	
 \subsection{Implementation NFS READ in NFS-Ganesha}
 
- The request processing in NFS-Ganesha is done by pthreads. Figure~\ref{fig:NFSReadArch} depicts the architecture diagram \cite{NFSv4} of \textsc{nfs\_read} in NFS-Ganesha. The dispatcher thread will listen for incoming \textsc{nfs request} but will not decode them. It will choose the least busy worker and add the request to its lists of requests to process. Duplicate request management is also done by the dispatcher thread. One of the worker thread will then dequeue the request from the worker queue and process it. The worker threads do most of the job. These threads are very core to the NFS processing in NFS-Ganesha. The processing of a read request involves validating the client access on the requested file. On success, the worker thread will decode it and use Cache Inode API and File Content API calls to perform the read required for this request. Once the server has retrieved the data successfully from the underlying file system, it will then send the response back to the client with the requested data.
+ The request processing in NFS-Ganesha is done by pthreads. Figure~\ref{fig:NFSReadArch} depicts the architecture diagram of \textsc{nfs\_read} in NFS-Ganesha. The dispatcher thread will listen for incoming \textsc{nfs request} but will not decode them. It will choose the least busy worker and add the request to its lists of requests to process. Duplicate request management is also done by the dispatcher thread. One of the worker thread will then dequeue the request from the worker queue and process it. The worker threads do most of the job. These threads are very core to the NFS processing in NFS-Ganesha. The processing of a read request involves validating the client access on the requested file. On success, the worker thread will decode it and use Cache Inode API and File Content API calls to perform the read required for this request. Once the server has retrieved the data successfully from the underlying file system, it will then send the response back to the client with the requested data.
   
 \begin{figure*}
 \centering
 \includegraphics[scale=1.0]{figures/completion_time.eps}
-\caption{Completion	Time for NFS Asynchronous read and normal NFs read on a flash storage}
+\caption{Completion	Time for NFS Asynchronous read and normal NFS read on a flash storage}
 \label{fig:NFSCompletionTimes}
 \end{figure*}  
 
@@ -107,12 +107,12 @@ Pynfs server on receiving the READ request, spawns a thread to process the reque
 The client side operations for asynchronous read are similar to that of a normal read. Once the request is sent, the client keeps track of them based on their \textit{reqid} and \textit{stateid}. If the client doesnot hear back from the server in the \textit{timeout} specified in the request, the client times out and resends the request. The client uses both \textit{reqid} and \textit{stateid} to keep track of the requests that are sent to the server.  Here \textit{reqid} is essential because the same file owner might have triggered multiple request on the same file.  
   
 \subsection{Implementation of NFS Asynchronous Read in Pynfs Server}
- \textsc{nfs async read} implementation is mostly similar to that of a \textsc{nfs read} operation. On receiving the request the server performs validation on the \textit{stateid}. If mandatory file locking is \textsc{on} for the file, and if the region corresponding to the data to be read from file is write locked by an owner not associated with the \textit{stateid}, the server will return the \textsc{nfs4err\_locked} error. The client should try to get the appropriate read record lock via the \textsc{lock} operation before re-attempting the \textsc{read}. Otherwise, if the file is free to read, the client will spawn a second thread to process the read request. The first thread that received the request will reply back with a \textsc{nfs4\_ok} status to the client. The second thread then does a read on the file identified by the current \textit{filehandle}. Once it fetches the required data to serve the request, it then triggers a callback request to the client with the data. The server also keeps track of the all the \textit{reqid}s for which an \textsc{nfs callback} is yet to be sent.
+ \textsc{nfs async read} implementation is mostly similar to that of a \textsc{nfs read} operation. On receiving the request the server performs validation on the \textit{stateid}. If mandatory file locking is \textsc{on} for the file, and if the region corresponding to the data to be read from file is write locked by an owner not associated with the \textit{stateid}, the server will return the \textsc{nfs4err\_locked} error. The client should try to get the appropriate read record lock via the \textsc{lock} operation before re-attempting the \textsc{read}. Otherwise, if the file is free to read, the server will spawn a second thread to process the read request. The first thread that received the request will reply back with a \textsc{nfs4\_ok} status to the client. The second thread then does a read on the file identified by the current \textit{filehandle}. Once it fetches the required data to serve the request, it then triggers a callback request to the client with the data. The server also keeps track of the all the \textit{reqid}s for which an \textsc{nfs callback} is yet to be sent.
  
     
 \subsection{Implementation NFS Asynchronous Read in NFS-Ganesha}  
 
- Figure~\ref{fig:NFSAsyncReadArch} depicts the architecture diagram \cite{NFSv4} of \textsc{nfs\_asyncread} in NFS-Ganesha. The dispatcher thread will listen for incoming NFS requests but will not decode them \cite{linuxsymp}. It will choose the least busy worker and add the request to its lists of requests to process. The worker thread then performs validation on the \textit{stateid}. If  the checks succeed, an \textsc{nfs4\_callback} request is enqueued back into the list of requests to be processed.  This involves preparing a new \textsc{nfs request} for the callback and then en-queuing the request into the worker queue. After en-queuing the callback, the worker thread responds with an \textsc{nfs4\_ok} back to the client. On receiving the initial response, client is freed from the blocking call and can perform further tasks. Now on the server side, a least busy worker will dequeue this new request and process it. This worker thread will perform the actual file system read/cache read depending on the presence of data. After reading the data, \textsc{cb\_async\_read} request is sent to the client via the callback channel. The worker thread which has performed the actual read dispatches the callback request to the client. 
+ Figure~\ref{fig:NFSAsyncReadArch} depicts the architecture diagram of \textsc{nfs\_asyncread} in NFS-Ganesha. The dispatcher thread will listen for incoming NFS requests but will not decode them. It will choose the least busy worker and add the request to its lists of requests to process. The worker thread then performs validation on the \textit{stateid}. If  the checks succeed, an \textsc{nfs4\_callback} request is enqueued back into the list of requests to be processed.  This involves preparing a new \textsc{nfs request} for the callback and then en-queuing the request into the worker queue. After en-queuing the callback, the worker thread responds with an \textsc{nfs4\_ok} back to the client. On receiving the initial response, client is freed from the blocking call and can perform further tasks. Now on the server side, a least busy worker will dequeue this new request and process it. This worker thread will perform the actual file system read/cache read depending on the presence of data. After reading the data, \textsc{cb\_async\_read} request is sent to the client via the callback channel. The worker thread which has performed the actual read dispatches the callback request to the client. 
  
 
 \begin{figure*}
