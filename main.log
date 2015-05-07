@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2014.8.27)  6 MAY 2015 21:16
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2015.3.15)  7 MAY 2015 00:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -229,8 +229,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--8
  []
 
 
-Underfull \hbox (badness 2903) in paragraph at lines 3--8
-\OT1/ptm/m/n/10 We pro-pose Asyn-chronous read, where the server
+Underfull \hbox (badness 3138) in paragraph at lines 3--8
+\OT1/ptm/m/n/10 We pro-pose a novel asyn-chronous read op-er-a-tion,
+ []
+
+
+Underfull \hbox (badness 2096) in paragraph at lines 3--8
+\OT1/ptm/m/n/10 We have im-ple-mented asyn-chronous read op-er-a-tion
  []
 
 
@@ -250,8 +255,6 @@ File: figures/ReadSequence.eps Graphic file (type eps)
 <figures/ReadSequence.eps>) (./bg.tex
 File: figures/AsyncSequence.eps Graphic file (type eps)
  <figures/AsyncSequence.eps>
-Underfull \vbox (badness 3780) has occurred while \output is active []
-
 File: figures/Read.eps Graphic file (type eps)
 
 <figures/Read.eps>) (./design.tex
@@ -370,9 +373,13 @@ Underfull \hbox (badness 1033) in paragraph at lines 82--83
 \OT1/ptm/m/n/10 for per-form-ing ac-tual read dur-ing call-back in asyn-
  []
 
-[5] [6]
+[5]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [6]
 File: figures/completion_time.eps Graphic file (type eps)
- <figures/completion_time.eps>
+
+<figures/completion_time.eps>
 Overfull \hbox (30.8475pt too wide) in paragraph at lines 100--101
  [][] 
  []
@@ -383,8 +390,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 113--113
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 115--116
-\OT1/ptm/m/n/10 Figure 4[] de-picts the ar-chi-tec-ture di-a-gram of
+Underfull \hbox (badness 4686) in paragraph at lines 115--116
+\OT1/ptm/m/n/10 Figure 4[] de-picts the ar-chi-tec-ture di-a-gram [8] of
  []
 
 
@@ -411,14 +418,35 @@ Underfull \vbox (badness 1237) has occurred while \output is active []
 (./futurework.tex) (./ack.tex) (./main.bbl
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 22.
-) [10] (./main.aux) ) 
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--40
+[]\OT1/ptm/m/n/10 Venkateswararao Ju-jjuri.  Nfs-ganesha.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--40
+\OT1/ptm/m/sl/8 http : / / events . linuxfoundation . org / sites / events / ^^
+Lles / slides /
+ []
+
+[10]
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ¨ in font ptmr7t!
+
+Underfull \hbox (badness 10000) in paragraph at lines 63--67
+[]\OT1/ptm/m/n/10 Jacques-Charles Lafou-crire Philippe De-
+ []
+
+) [11
+
+] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 3293 strings out of 493305
- 46352 string characters out of 6139897
- 132952 words of memory out of 5000000
- 6680 multiletter control sequences out of 15000+600000
+ 3297 strings out of 493305
+ 46397 string characters out of 6139897
+ 131964 words of memory out of 5000000
+ 6684 multiletter control sequences out of 15000+600000
  13309 words of font info for 36 fonts, out of 8000000 for 9000
  958 hyphenation exceptions out of 8191
- 34i,9n,49p,2475b,973s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 34i,9n,49p,2475b,1418s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.dvi (10 pages, 50476 bytes).
+Output written on main.dvi (11 pages, 51648 bytes).
