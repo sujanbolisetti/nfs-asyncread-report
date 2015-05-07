@@ -648,6 +648,8 @@ compileroslowpower2003	template/master.bib	20388
 complexNetworks	template/master.bib	13160
 compsys90massalin	template/master.bib	14972
 computsurv03podling	template/master.bib	22908
+conc	conclusion.tex	2
+conclusion	conclusion.tex	1
 condit09sosp	template/master.bib	24019
 connectathon-web	template/master.bib	22534
 contextawarediskeng2008	template/master.bib	16852
@@ -1014,11 +1016,15 @@ fernandez99dixie	template/master.bib	19653
 ffsb	template/master.bib	28407
 fft	template/master.bib	1608
 fgcs12redflag	template/master.bib	25673
-fig:NFSAsyncRead	bg.tex	36
-fig:NFSAsyncReadArch	implementation.tex	88
-fig:NFSRead	bg.tex	24
-fig:NFSReadArch	design.tex	11
-fig:NFSSlotreuse	evaluation.tex	17
+fig:InterstingObservation	implementation.tex	122
+fig:NFSAsyncRead	bg.tex	24
+fig:NFSAsyncReadArch	design.tex	10
+fig:NFSCompletionTimes	implementation.tex	102
+fig:NFSRead	intro.tex	12
+fig:NFSReadArch	bg.tex	36
+fig:NFSSlotreuse	evaluation.tex	31
+fig:NFSThroughput	implementation.tex	79
+fig:performancesequence	evaluation.tex	8
 file-motel	template/master.bib	8158
 file_memory_scheduling-sjcc1967	template/master.bib	25025
 filebench-gamma	template/master.bib	21491
@@ -2240,6 +2246,7 @@ sdfs-web	template/master.bib	12504
 seagate-momentus	template/master.bib	17063
 seagate-smr-gains	template/master.bib	28427
 seagate:scsidisk	template/master.bib	22453
+sec:Evaluation	evaluation.tex	2
 security04avfs	template/master.bib	9146
 sehgal10thesis	template/master.bib	21790
 sekar03mcc	template/master.bib	9048

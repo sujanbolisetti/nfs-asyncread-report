@@ -5,6 +5,13 @@ The Network File System (NFS) allows clients to access data seamlessly over the 
 
 For implementing the asynchronous I/O, we have used NFS-Ganesha \cite{ganesha} as the NFS server and Pynfs \cite{pynfs} as the NFS client. We have used the latest stable version of NFS that is v4.1 for both client and server. NFS-Ganesha is an user level implementation of the NFS server in \textit{C} language. We chose NFS-Ganesha because it is easy to enhance NFS-Ganesha when compared to the kernel NFS source code. NFS-Ganesha is also actively used by a wider audience and also supported by major companies like IBM, Panasas and Redhat. Hence it supports all the latest features of the NFSv4.1 like sessions, callbacks. Pynfs is an user level implementation of NFS client and server in \textit{python}, it is used as a test suite for checking the correctness of NFS protocol.
 
+\begin{figure*}
+\centering
+\includegraphics[scale=0.9]{figures/ReadSequence.eps}
+\caption{NFS Read Sequence Diagram}
+\label{fig:NFSRead}
+\end{figure*}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% For Emacs:
 % Local variables:

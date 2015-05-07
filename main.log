@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2015.3.15)  5 MAY 2015 12:34
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2014.8.27)  6 MAY 2015 21:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -234,11 +234,6 @@ Underfull \hbox (badness 2903) in paragraph at lines 3--8
  []
 
 
-Underfull \hbox (badness 1314) in paragraph at lines 3--8
-\OT1/ptm/m/n/10 pro-cess-ing to im-prove through-put on a per pro-cess
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 3--8
 
  []
@@ -249,23 +244,23 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [1
 
 
-])
-(./bg.tex
+]
 File: figures/ReadSequence.eps Graphic file (type eps)
- <figures/ReadSequence.eps>
+
+<figures/ReadSequence.eps>) (./bg.tex
 File: figures/AsyncSequence.eps Graphic file (type eps)
- <figures/AsyncSequence.eps>) (./design.tex
-Missing character: There is no â in font ptmr7t!
-Missing character: There is no € in font ptmr7t!
-Missing character: There is no ¢ in font ptmr7t!
-Missing character: There is no â in font ptmri7t!
-Missing character: There is no € in font ptmri7t!
-Missing character: There is no ¢ in font ptmri7t!
+ <figures/AsyncSequence.eps>
+Underfull \vbox (badness 3780) has occurred while \output is active []
+
 File: figures/Read.eps Graphic file (type eps)
-<figures/Read.eps> [2]) (./implementation.tex
+
+<figures/Read.eps>) (./design.tex
+File: figures/AsyncRead.eps Graphic file (type eps)
+ <figures/AsyncRead.eps> [2])
+(./implementation.tex
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 6.
- [3]
+
 Underfull \hbox (badness 1442) in paragraph at lines 15--28
 \OT1/ptm/m/it/10 ASYNC[]READ4args \OT1/ptm/m/n/10 : The client sends these ar-g
 u-
@@ -316,6 +311,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 15--28
 
  []
 
+[3]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Font Info:    Try loading font information for OML+ptm on input line 36.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omlptm.fd
+File: omlptm.fd 
+)
+LaTeX Font Info:    Font shape `OML/ptm/m/it' in size <10> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 36.
+
+Underfull \hbox (badness 10000) in paragraph at lines 35--39
+
+ []
+
 
 Underfull \hbox (badness 10000) in paragraph at lines 35--39
 
@@ -327,10 +337,6 @@ Underfull \hbox (badness 2726) in paragraph at lines 35--39
  []
 
 [4]
-LaTeX Font Info:    Try loading font information for OML+ptm on input line 55.
- (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omlptm.fd
-File: omlptm.fd 
-)
 LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <10> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 55.
 
@@ -358,66 +364,61 @@ Underfull \hbox (badness 4752) in paragraph at lines 59--66
 \OT1/ptm/m/n/10 client for-wards the data to the re-spec-tive owner
  []
 
-[5]
-Underfull \hbox (badness 1259) in paragraph at lines 77--78
-[]\OT1/ptm/m/n/10 We will now dis-cuss the ex-ist-ing im-ple-men-ta-tion
+File: figures/Throughput.eps Graphic file (type eps)
+<figures/Throughput.eps>
+Underfull \hbox (badness 1033) in paragraph at lines 82--83
+\OT1/ptm/m/n/10 for per-form-ing ac-tual read dur-ing call-back in asyn-
+ []
+
+[5] [6]
+File: figures/completion_time.eps Graphic file (type eps)
+ <figures/completion_time.eps>
+Overfull \hbox (30.8475pt too wide) in paragraph at lines 100--101
+ [][] 
  []
 
 
-Underfull \hbox (badness 2564) in paragraph at lines 77--78
-\OT1/ptm/m/n/10 of \OT1/ptm/m/sc/10 NFS[]READ \OT1/ptm/m/n/10 in NFS Gane-sha. 
-Un-der-stand-ing
- []
-
-File: figures/AsyncRead.eps Graphic file (type eps)
-<figures/AsyncRead.eps>
-Underfull \hbox (badness 2134) in paragraph at lines 94--94
-[]\OT1/ptm/b/n/12 Implementation NFS Read in NFS-
+Underfull \hbox (badness 10000) in paragraph at lines 113--113
+[]\OT1/ptm/b/n/12 Implementation NFS Asyn-chronous
  []
 
 
-Underfull \vbox (badness 4886) has occurred while \output is active []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 106--107
+Underfull \hbox (badness 10000) in paragraph at lines 115--116
 \OT1/ptm/m/n/10 Figure 4[] de-picts the ar-chi-tec-ture di-a-gram of
  []
 
 
-Underfull \hbox (badness 1527) in paragraph at lines 106--107
-\OT1/ptm/m/sc/10 NFS[]ASYNCRead \OT1/ptm/m/n/10 in NFS Gane-sha. The server
+Underfull \hbox (badness 1142) in paragraph at lines 115--116
+\OT1/ptm/m/sc/10 nfs[]asyncread \OT1/ptm/m/n/10 in NFS-Ganesha. The dis-patcher
+
  []
 
+[7]
+File: figures/InterstingObservation.eps Graphic file (type eps)
+ <figures/InterstingObservation.eps>) (./evaluation.tex
+File: figures/performancesequence.eps Graphic file (type eps)
 
-Underfull \hbox (badness 1072) in paragraph at lines 106--107
-\OT1/ptm/m/n/10 read-/-cache read de-pend-ing on the pres-ence of data.
- []
-
-) (./evaluation.tex [6]
-Underfull \hbox (badness 1048) in paragraph at lines 6--7
-\OT1/ptm/m/n/10 is no/minute over-head in-volved in per-form-ing asyn-
- []
-
-
-Underfull \hbox (badness 1014) in paragraph at lines 8--9
-[]\OT1/ptm/m/n/10 The next met-ric we have eval-u-ated is through-put
+<figures/performancesequence.eps>
+Underfull \hbox (badness 1810) in paragraph at lines 18--20
+[]\OT1/ptm/m/n/10 Figure 5[] com-pares the time taken for the in-tial
  []
 
 File: figures/Slotreuse.eps Graphic file (type eps)
-<figures/Slotreuse.eps>) (./discussion.tex) (./futurework.tex [7]
-Underfull \vbox (badness 5637) has occurred while \output is active []
+<figures/Slotreuse.eps>) (./discussion.tex) (./conclusion.tex [8]
+Underfull \vbox (badness 1237) has occurred while \output is active []
 
-) (./ack.tex) (./main.bbl
+ [9])
+(./futurework.tex) (./ack.tex) (./main.bbl
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 22.
-) [8] (./main.aux) ) 
+) [10] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 3275 strings out of 493305
- 45986 string characters out of 6139897
- 127903 words of memory out of 5000000
- 6669 multiletter control sequences out of 15000+600000
+ 3293 strings out of 493305
+ 46352 string characters out of 6139897
+ 132952 words of memory out of 5000000
+ 6680 multiletter control sequences out of 15000+600000
  13309 words of font info for 36 fonts, out of 8000000 for 9000
  958 hyphenation exceptions out of 8191
- 34i,9n,49p,2473b,1476s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 34i,9n,49p,2475b,973s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.dvi (8 pages, 44268 bytes).
+Output written on main.dvi (10 pages, 50476 bytes).

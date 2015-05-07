@@ -1,12 +1,5 @@
 \section{Evaluation}
-\begin{figure*}
-\centering
-\includegraphics[scale=1.0]{figures/InterstingObservation.eps}
-\caption{Intersting observation incase of two consequtive requests on a hard disk}
-\label{fig:InterstingObservation}
-\end{figure*}
-
-	We have ran our experiments by running the NFS-Ganesha server on Amazon EC2 and Pynfs client on the local machine to replicate a real world application.  We have evaluated asynchronous read operation based on two metrics, one is the completion time and the other is the throughput. We have compared our results with the normal read request. The data size we read in performing normal read and asynchronous read are 512 bytes, 1KB, 1MB and 2MB. 
+\label{sec:Evaluation}
 
 \begin{figure*}
 \centering
@@ -15,6 +8,7 @@
 \label{fig:performancesequence}
 \end{figure*}
 
+	We have ran our experiments by running the NFS-Ganesha server on Amazon EC2 and Pynfs client on the local machine to replicate a real world application.  We have evaluated asynchronous read operation based on two metrics, one is the completion time and the other is the throughput. We have compared our results with the normal read request. The data size we read in performing normal read and asynchronous read are 512 bytes, 1KB, 1MB and 2MB. 
 
 	Figure~\ref{fig:NFSCompletionTimes} shows the  difference in the completion times between normal read and asynchronous read. we observed that the time taken for normal and asynchronous read is almost similar. This suggests that the overhead due to an additional callback incase of Asynchronous Read is not significant. Thus Asynchronous READ operation can be used in all the scenarios where client does not require data to continue its operations as there is no overhead. Also the growth in the file size had a similar effect on both NFS READ and NFS Asynchronous READ. 
 
@@ -30,8 +24,12 @@ Once the client recieves a NFS4\_Ok incase of Asynchronous READ from the server,
  Figure~\ref{fig:InterstingObservation} shows an intersting observation. When we have made two consecutive reads  using NFS READ on a file of size 1GB. While the first read has a offset of 1MB, the second read has a offset of 512 KB. The size of the data read is 512KB. The file offsets are choosen this way to prevent READ AHEAD caching. While it has taken 88 milliseconds  in NFS READ for both the requests to get completed, it has taken only 68 milliseconds for NFS Asynchronous READ. This can attributed to the scenario depicted  in   Figure~\ref{fig:performancesequence}. Incase of NFS READ, second read request is made only after the client recieves the reply to the first request. Thus there is no chance for both of them to be scheduled together to the disk. But in the case of Asynchronous READ, Since the second request is triggered immediately after receiving the NFS4\_OK to the first one, the two requests can be scheduled together to the disk. Thus there is a time gain since the seek head does not have to do a full rotation to reach the second position as both the experiments are scheduled together.    
 
 
-
-
+\begin{figure*}
+\centering
+\includegraphics[scale=0.7]{figures/Slotreuse.eps}
+\caption{NFS Asynchronous Read Slot Reuse Diagram}
+\label{fig:NFSSlotreuse}
+\end{figure*}
 
 
 
